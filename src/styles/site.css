@@ -1,0 +1,29 @@
+:root {
+  --header-font-family: 'Oldenburg', serif;
+  --body-font-family: 'Kite One', sans-serif;
+}
+
+body {
+  font-family: var(--body-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font-family);
+}
+
+.oldenburg-regular {
+  font-family: 'Oldenburg', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kite-one-regular {
+  font-family: 'Kite One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

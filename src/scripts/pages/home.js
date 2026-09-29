@@ -1,0 +1,1 @@
+alert('Welcome to the Board Game area of The Burgener Chalet');
