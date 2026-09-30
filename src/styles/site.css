@@ -93,6 +93,21 @@ header {
         }
     }
 
+    @media screen and (max-width: 645px) {
+        gap: 5px;
+        max-width: 360px;
+        grid-template-columns: 110px 1fr 85px;
+
+        #icon {
+            max-width: 100px;
+            height: auto;
+        }
+        #hamburger, #circle-x {
+            max-width: 75px;
+            height: auto;
+        }
+    }
+
     @media screen and (min-width: 645px) {
 
         grid-template-columns: 160px 1fr;
