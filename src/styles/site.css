@@ -152,6 +152,10 @@ footer {
     border-top: 1px solid var(--primary-color);
     margin-top: 10px;
 
+    #jokeBox {
+        font-style: italic;
+    }
+
     a {
         margin-top: 5px;
         min-height: 44px;
