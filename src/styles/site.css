@@ -1,3 +1,4 @@
+/* Optimized for a minimum screen width of 320 pixels, per industry standards */
 /* Root styles (variables) */
 :root {
     --header-font-family: 'Oldenburg', serif;
@@ -44,10 +45,38 @@ h6 {
     font-weight: 400;
     font-style: normal;
     color: var(--primary-color);
+    text-align: center;
+    padding: 5px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
     border: 2px solid var(--secondary-color);
     border-radius: 15px;
-    padding: 5px;
-    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Banner styles */
+header {
+
+    #banner {
+        display: grid;
+        grid-template-columns: 115px 1fr;
+        padding-right: 50px;
+
+        h1 {
+            font-size: 1.4em;
+            align-content: center;
+        }
+    }
+}
+
+#icon {
+    max-height: 90px;
+    width: auto;
 }
 
 /* Hamburger styles */
@@ -74,28 +103,45 @@ nav {
     display: grid;
     grid-template-rows: repeat(5, 0fr);
     transition: grid-template-rows 0.5s ease-out;
+    margin-top: 10px;
 
+    /* Menu visible on small screens */
     &.show {
         grid-template-rows: repeat(5, 1fr);
+        gap: 2px;
+        margin-bottom: 10px;
 
         a {
-            border: 1px solid red;
-            padding: 10px;
+            padding: 5px;
+            border: 1px solid var(--secondary-color);
         }
     }
 
+    /* Menu in all contexts */
     a {
+        box-shadow: 3px 3px 5px var(--primary-color);
+        transition: padding 0.5s ease-out;
         overflow: hidden;
         color: var(--primary-color);
         text-decoration: none;
         background-color: var(--light-gray);
-        font-size: 1.2em;
-        transition: padding 0.5s ease-out;
+        font-size: 1.4em;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 15px;
+
+        &:active {
+            box-shadow: 1px 1px 2px var(--primary-color);
+        }
+
+        &:hover {
+            outline: 2px red solid;
+        }
     }
 }
 
 footer {
-    font-size: .8em;
+    font-size: 0.8em;
     position: sticky;
     bottom: 0px;
     left: 0px;
@@ -104,30 +150,69 @@ footer {
     flex-direction: column;
     background-color: white;
     border-top: 1px solid var(--primary-color);
+    margin-top: 10px;
 
     a {
+        margin-top: 5px;
         min-height: 44px;
         align-content: center;
         text-align: center;
+        text-decoration: none;
+        background-color: var(--light-gray);
+        color: var(--primary-color);
+        font-size: 1.4em;
+        font-weight: bold;
+        padding: 5px;
+        box-shadow: 3px 3px 5px var(--primary-color);
+        border: 1px solid var(--secondary-color);
+        border-radius: 15px;
+
+        &:active {
+            box-shadow: 1px 1px 2px var(--primary-color);
+        }
+
+        &:hover {
+            outline: 2px red solid;
+        }
     }
 }
 
-/* a.button {
-    color: var(--dark-gray);
-    padding: 5px;
-    box-shadow: 3px 3px 5px var(--primary-color);
-    border: 1px solid var(--secondary-color);
-    font-weight: bold;
-    font-family: var(--header-font-family);
-    border-radius: 10px;
-    font-size: 1.2em;
-    background-color: var(--light-gray);
-    text-decoration: none;
-    cursor: pointer;
+/* Transition layout to full-sized screens */
+@media screen and (min-width: 600px) {
+    header {
+        #banner {
+            h1 {
+                font-size: 2.4em;
+                transition: font-size 0.5s ease;
+            }
+        }
 
-    &:hover {
-        box-shadow: 3px 3px 5px var(--secondary-color);
+        #hamburger-icons {
+            display: none;
+        }
+
+        nav,
+        #navbar.show {
+            display: grid;
+            grid-template-rows: unset;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+
+            a {
+                font-size: 1.1em;
+                border: 1px solid var(--secondary-color);
+                transition: font-size 0.5s ease;
+                padding: 7px;
+            }
+        }
     }
-} */
+
+    footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 
 /* Form styles */
