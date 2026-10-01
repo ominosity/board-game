@@ -1,3 +1,5 @@
+import ExternalSource from "./ExternalSource";
+
 /* Load the header and footer sections on all pages, along with the event listeners
    for the hamburger elements on small screens */
 export async function LoadHeaderFooter() {
@@ -25,6 +27,17 @@ export async function LoadHeaderFooter() {
         hamburger.classList.toggle('show');
         circleX.classList.toggle('show');
     });
+    
+    /* Get a joke and output it to the console */
+    const options = {
+        headers: {
+            "Accept": "application/json"
+        
+    }};
+    const jokeFactory = new ExternalSource('https://icanhazdadjoke.com/', options);
+    const joke = await jokeFactory.init();
+    const jokeElement = document.getElementById('jokeBox');
+    jokeElement.innerText = joke['joke']; 
 }
 
 /* Load HTML templates from a given path (for partial HTML files) */
