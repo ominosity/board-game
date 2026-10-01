@@ -1,4 +1,4 @@
-import ExternalSource from "./ExternalSource";
+import ExternalSource from './ExternalSource';
 
 /* Load the header and footer sections on all pages, along with the event listeners
    for the hamburger elements on small screens */
