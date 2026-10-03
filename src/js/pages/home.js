@@ -8,6 +8,6 @@ LoadHeaderFooter();
 // const availability = await getAvailability();
 // console.log(availability);
 
-const gamesList = new Games();
-await gamesList.init();
-gamesList.showGames();
+// const gamesList = new Games();
+// await gamesList.init();
+// gamesList.showGames();
