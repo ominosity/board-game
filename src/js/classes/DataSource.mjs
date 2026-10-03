@@ -1,4 +1,4 @@
-import { convertToJson } from './utils.mjs';
+import { convertToJson } from './Utils.mjs';
 
 export default class DataSource {
   constructor(path, outputType, sourceType = 'json') {

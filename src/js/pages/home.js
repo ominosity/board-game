@@ -1,4 +1,4 @@
-import { LoadHeaderFooter } from '../classes/utils.mjs';
+import { LoadHeaderFooter } from '../classes/Utils.mjs';
 import Games from '../classes/Games.mjs';
 LoadHeaderFooter();
 
