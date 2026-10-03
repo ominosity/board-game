@@ -118,24 +118,28 @@ nav {
 
   /* Menu in all contexts */
   a {
-    box-shadow: 3px 3px 5px var(--primary-color);
     transition: padding 0.5s ease-out;
     overflow: hidden;
-    color: var(--primary-color);
-    text-decoration: none;
-    background-color: var(--light-gray);
-    font-size: 1.4em;
-    font-weight: bold;
-    text-align: center;
     border-radius: 15px;
+  }
+}
 
-    &:active {
-      box-shadow: 1px 1px 2px var(--primary-color);
-    }
+/* Common styles for interactive buttons and images */
+.nav-button {
+  box-shadow: 3px 3px 5px var(--primary-color);
+  text-decoration: none;
+  background-color: var(--light-gray);
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.4em;
+  font-weight: bold;
 
-    &:hover {
-      outline: 2px solid var(--secondary-color);
-    }
+  &:active {
+    box-shadow: var(--active-button-box-shadow);
+  }
+
+  &:hover {
+    outline: var(--button-hover-outline);
   }
 }
 
@@ -159,27 +163,11 @@ footer {
   }
 
   a {
+    padding: 5px 20px;
     margin-top: 5px;
     min-height: 44px;
-    align-content: center;
-    text-align: center;
-    text-decoration: none;
-    background-color: var(--light-gray);
-    color: var(--primary-color);
-    font-size: 1.4em;
-    font-weight: bold;
-    padding: 5px;
-    box-shadow: 3px 3px 5px var(--primary-color);
     border: 1px solid var(--secondary-color);
     border-radius: 15px;
-
-    &:active {
-      box-shadow: 1px 1px 2px var(--primary-color);
-    }
-
-    &:hover {
-      outline: 2px solid var(--secondary-color);
-    }
   }
 }
 
@@ -220,5 +208,6 @@ footer {
     justify-content: space-between;
   }
 }
+
 
 /* Form styles */
