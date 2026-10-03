@@ -1,0 +1,785 @@
+[
+  {
+    "id": 1,
+    "name": "Tapple",
+    "location": "Living Room",
+    "separateBoard": false,
+    "bggId": 2272,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 2,
+    "name": "Aggravation",
+    "location": "Living Room",
+    "separateBoard": true,
+    "bggId": 129556,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 3,
+    "name": "Trivial Pursuit 20th Anniversary Edition",
+    "location": "Living Room",
+    "separateBoard": false,
+    "bggId": 4492,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 4,
+    "name": "Telestrations",
+    "location": "Living Room",
+    "separateBoard": false,
+    "bggId": 46213,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 5,
+    "name": "Buzzword",
+    "location": "Living Room",
+    "separateBoard": false,
+    "bggId": 8690,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 6,
+    "name": "Machi Koro 2",
+    "location": "Living Room",
+    "separateBoard": false,
+    "bggId": 340364,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 7,
+    "name": "Tiddly Winks",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 4792,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 8,
+    "name": "Taco Cat Goat Cheese Pizze",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 253664,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 9,
+    "name": "Pass the Pigs",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 2593,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 10,
+    "name": "Dodgy Dice",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": null,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 11,
+    "name": "Chrononauts",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 815,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 12,
+    "name": "Exploding Kittens",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 172225,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 13,
+    "name": "Unstable Unicorns",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 234190,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 14,
+    "name": "Family Feud",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 5312,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 15,
+    "name": "Boggle",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 1293,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 16,
+    "name": "The Game of Things",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 10934,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 17,
+    "name": "Cat Face",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 391557,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 18,
+    "name": "Sparkle Kitty",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 220547,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 19,
+    "name": "Cranium Whoonu",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 16035,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 20,
+    "name": "Curses!",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 5298,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 21,
+    "name": "Skip Bo",
+    "location": "Basket 1",
+    "separateBoard": false,
+    "bggId": 1269,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 22,
+    "name": "Trailer Park Wars",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 32146,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 23,
+    "name": "Balderdash",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 163,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 24,
+    "name": "Identity Crisis?",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 30457,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 25,
+    "name": "A Little Wordy",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 335869,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 26,
+    "name": "The Golden Girls: Any Way You Slice It",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 257880,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 27,
+    "name": "The Chameleon",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 227072,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 28,
+    "name": "Machi Koro: Bright Lights, Big City",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 205494,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 29,
+    "name": "Checkers",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 2083,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 30,
+    "name": "Mormon Mouthful",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 15239,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 31,
+    "name": "Castle: The Detective Card Game",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 131389,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 32,
+    "name": "Pub Trivia",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 135598,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 33,
+    "name": "Scrabble Slam",
+    "location": "Basket 2",
+    "separateBoard": false,
+    "bggId": 40508,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 34,
+    "name": "Seek: The Original LDS Quiz Game",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": 13627,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 35,
+    "name": "Mystery Mormon Trivia Game",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": null,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 36,
+    "name": "Blockbuster",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": 272438,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 37,
+    "name": "Farkle",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": 3181,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 38,
+    "name": "Simon",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": 5749,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 39,
+    "name": "Travel Clue",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": 13682,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 40,
+    "name": "Settlers of Catan",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": 152959,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 41,
+    "name": "Apples to Apples",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": 74,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 42,
+    "name": "Play-Do",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": null,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 43,
+    "name": "BYU Checkers",
+    "location": "Basket 3",
+    "separateBoard": true,
+    "bggId": null,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 44,
+    "name": "Uno",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": 2223,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 45,
+    "name": "Uno: Super Mario",
+    "location": "Basket 3",
+    "separateBoard": false,
+    "bggId": 209095,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 46,
+    "name": "Card Shuffler",
+    "location": "Basket 4",
+    "separateBoard": false,
+    "bggId": null,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 47,
+    "name": "Various Face Cards",
+    "location": "Basket 4",
+    "separateBoard": false,
+    "bggId": null,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 48,
+    "name": "Cat-opoly",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 9704,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 49,
+    "name": "The Celestial Companions",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 30340,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 50,
+    "name": "Oodles",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 642,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 51,
+    "name": "Spontaneous",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 372931,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 52,
+    "name": "Taboo",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 1111,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 53,
+    "name": "Fill in the Blanks",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 425858,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 54,
+    "name": "Gesstures",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 2379,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 55,
+    "name": "Solarquest",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 1836,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 56,
+    "name": "Battling Tops",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 4934,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 57,
+    "name": "Book of Mormon Challenge",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 13053,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 58,
+    "name": "The Crazy Cat Lady Game",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 39372,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 59,
+    "name": "Tribond",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 1962,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 60,
+    "name": "Trivial Pursuit Genus IV",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 1299,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 61,
+    "name": "Trivial Pursuit Genus 5",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 2819,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 62,
+    "name": "Trivial Pursuit Totally 80s",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 24376,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 63,
+    "name": "Trivial Pursuit DVD Pop Culture",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 8039,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 64,
+    "name": "Trivial Pursuit DVD Pop Culture: Second Edition",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 20589,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 65,
+    "name": "Trivial Pursuit: Netflix's Stranger Things - Back to the 80s Edition",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 290557,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 66,
+    "name": "Can You Beat Ken",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 16567,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 67,
+    "name": "Ultimate Outburst",
+    "location": "Basket 5",
+    "separateBoard": true,
+    "bggId": 920,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 68,
+    "name": "Scattergories",
+    "location": "Living Room",
+    "separateBoard": false,
+    "bggId": 2381,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 69,
+    "name": "Jots and Tittles",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 17850,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 70,
+    "name": "Trivial Pursuit Millennium Edition",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 3048,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 71,
+    "name": "Mental Floss Game",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 19621,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 72,
+    "name": "The Logo Board Game",
+    "location": "Living Room Closet",
+    "separateBoard": false,
+    "bggId": 64204,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 73,
+    "name": "Trivial Pursuit 20th Anniversary Edition",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 4492,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 74,
+    "name": "Munchkin Legends Deluxe",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 171199,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 75,
+    "name": "Smart Ass",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 27389,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 76,
+    "name": "Wit's End",
+    "location": "Basket 5",
+    "separateBoard": false,
+    "bggId": 1362,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 77,
+    "name": "The Cat Game",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 231302,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 78,
+    "name": "Cranium",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 891,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 79,
+    "name": "The Barbie Game",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 9633,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 80,
+    "name": "Risk",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 181,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 81,
+    "name": "The Game of Life",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 172307,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 82,
+    "name": "Glass Chess",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 171,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 83,
+    "name": "Electronic Mall Madness",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 5086,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 84,
+    "name": "Outsmarted!",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 323367,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 85,
+    "name": "Scrabble Deluxe Edition",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 320,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 86,
+    "name": "Risk : The Lord of the Rings Edition",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 8107,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  },
+  {
+    "id": 87,
+    "name": "Chutes and Ladders",
+    "location": "Closet Shelves",
+    "separateBoard": false,
+    "bggId": 5432,
+    "minPlayers": 0,
+    "maxPlayers": 0
+  }
+]

@@ -134,7 +134,7 @@ nav {
     }
 
     &:hover {
-      outline: 2px red solid;
+      outline: 2px solid var(--secondary-color);
     }
   }
 }
@@ -155,6 +155,7 @@ footer {
     font-style: italic;
     margin-left: 10px;
     margin-right: 10px;
+    text-align: center;
   }
 
   a {
@@ -177,7 +178,7 @@ footer {
     }
 
     &:hover {
-      outline: 2px red solid;
+      outline: 2px solid var(--secondary-color);
     }
   }
 }

@@ -45,3 +45,11 @@ async function loadTemplate(path) {
     const response = await fetch(path);
     return await response.text();
 }
+
+export async function convertToJson(response) {
+  if (response.ok) {
+    return response.json();
+  }
+  const errorResponse = await response.json().catch(() => ({ error: 'Bad Response' }));
+  throw { name: 'servicesError', message: errorResponse };
+}
