@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log In - Burgener Chalet Board Games</title>
+    <title>Account Registration - Burgener Chalet Board Games</title>
     <meta name="author" content="Richard Burgener" />
     <meta
       name="description"
@@ -25,16 +25,24 @@
   <body>
     <header></header>
     <main>
-      <h2>Log Into Account</h2>
-      <form id="sign-in-form" autocomplete="on">
-        <label for="username" autocomplete="username">Username</label>
-        <input type="text" id="username">
-
-        <label for="password" autocomplete="current-password">Password</label>
-        <input type="password" id="password">
-
-        <button type="submit" id="sign-in-button">Log In</button>
-        <a href="/account/register.html" class="button" id="sign-up-button">Sign up</a>
+      <h2>Register for an Account</h2>
+      <form id="register-form">
+        <label for="new-username">Username</label>
+        <input type="text" id="new-username" autocomplete="username" required>
+      
+        <label for="new-password">Password</label>
+        <input type="password" id="new-password" required>
+      
+        <label for="new-confirm-password">Confirm Password</label>
+        <input type="password" id="new-confirm-password" required>
+      
+        <label for="new-name">Name</label>
+        <input type="text" id="new-name" autocomplete="name" required>
+      
+        <label for="new-email">Email</label>
+        <input type="email" id="new-email" autocomplete="email" required>
+      
+        <button id="register-button">Register</button>
       </form>
     </main>
     <footer></footer>
