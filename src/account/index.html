@@ -27,15 +27,25 @@
     <main>
       <h2>Log Into Account</h2>
       <form id="sign-in-form" autocomplete="on">
-        <label for="username" autocomplete="username">Username</label>
-        <input type="text" id="username">
+        <label for="username">Username</label>
+        <input type="text" id="username" autocomplete="username" required />
 
-        <label for="password" autocomplete="current-password">Password</label>
-        <input type="password" id="password">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          autocomplete="current-password"
+          required
+        />
 
         <button type="submit" id="sign-in-button">Log In</button>
-        <a href="/account/register.html" class="button" id="sign-up-button">Sign up</a>
+        <a href="/account/register.html" class="button" id="sign-up-button"
+          >Sign up</a
+        >
       </form>
+      <div id="success" class="hide">
+        Welcome back, <span id="personal-name"></span>
+      </div>
     </main>
     <footer></footer>
   </body>

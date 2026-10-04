@@ -6,31 +6,57 @@ loadHeaderFooter();
 const authenticator = new Authenticator();
 authenticator.init();
 
-const signInButton = document.getElementById('sign-in-button');
-const updateButton = document.getElementById('update-button');
-const registerButton = document.getElementById('register-button');
+const signInForm = document.getElementById('sign-in-form');
+const updateForm = document.getElementById('update-form');
+const registerForm = document.getElementById('register-form');
 
-if (!authenticator.isAuthenticated()) {
-  console.log('Not authenticated')
-}
+// if (!authenticator.isAuthenticated()) {
+//   console.log('Not authenticated')
+// }
 
-if (signInButton) {
-  signInButton.addEventListener('click', (event) => {
+if (signInForm) {
+  signInForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log('sign in button clicked');
+    const checkUsername = document.getElementById('username').value;
+    const checkPassword = document.getElementById('password').value;
+
+    authenticator.init();
+
+    try {
+      const results = authenticator.login(checkUsername, checkPassword);
+      if (results) {
+        signInForm.classList.add('hide');
+        document.getElementById('success').classList.remove('hide');
+        const name = document.getElementById('personal-name');
+        name.textContent = authenticator.getLoggedInName();
+      }
+    } catch (error) {
+      console.error(error);
+    }
   });
 }
 
-if (updateButton) {
-  updateButton.addEventListener('click', (event) => {
+if (updateForm) {
+  updateForm.addEventListener('submit', (event) => {
     event.preventDefault();
     console.log('update button clicked');
   });
 }
 
-if (registerButton) {
-  registerButton.addEventListener('click', (event) => {
+if (registerForm) {
+  registerForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log('register button clicked');
+    const username = document.getElementById('new-username');
+    const password = document.getElementById('new-password');
+    const name = document.getElementById('new-name');
+    const email = document.getElementById('new-email');
+
+    authenticator.registerUser(
+      username.value,
+      password.value,
+      name.value,
+      email.value,
+    );
+    window.location.replace('./index.html');
   });
 }

@@ -224,7 +224,7 @@ footer {
 
 /* Form styles */
 form {
-  font-size: .8em;
+  font-size: 0.8em;
   max-width: 360px;
   margin: 10px auto;
   padding: 20px;
@@ -243,12 +243,14 @@ form {
   input {
     padding: 5px;
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       outline: var(--outline);
     }
   }
 
-  button, .button {
+  button,
+  .button {
     margin: 10px 0 0 0;
     padding: 5px;
     grid-column: span 2;
@@ -265,8 +267,22 @@ form {
       box-shadow: var(--pressed-button-shadow);
     }
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       outline: var(--outline);
     }
   }
+}
+
+.hide {
+  display: none;
+}
+
+#success {
+  max-width: 360px;
+  margin: 10px auto;
+  padding: 20px;
+  border: var(--outline);
+  border-radius: 15px;
+  text-align: center;
 }

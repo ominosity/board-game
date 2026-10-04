@@ -1,47 +1,50 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Management - Burgener Chalet Board Games</title>
+    <meta name="author" content="Richard Burgener" />
+    <meta
+      name="description"
+      content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet"
+    />
+    <link rel="icon" href="/images/favicon.ico" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Account Management - Burgener Chalet Board Games</title>
-  <meta name="author" content="Richard Burgener" />
-  <meta name="description"
-    content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet" />
-  <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/styles/site.css" />
+    <script src="/js/pages/account.js" type="module"></script>
 
-  <link rel="stylesheet" href="/styles/site.css" />
-  <script src="/js/pages/account.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <header></header>
+    <main>
+      <h2>Update Account</h2>
+      <form id="edit-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" autocomplete="username" />
 
-<body>
-  <header></header>
-  <main>
-    <h2>Update Account</h2>
-    <form id="edit-form">
-    <label for="username">Username</label>
-    <input type="text" id="username" autocomplete="username">
-  
-    <label for="password">Password</label>
-    <input type="password" id="password">
-  
-    <label for="confirm-password">Confirm Password</label>
-    <input type="password" id="confirm-password">
-  
-    <label for="name">Name</label>
-    <input type="text" id="name" autocomplete="name">
-  
-    <label for="email">Email</label>
-    <input type="email" id="email" autocomplete="email">
-  
-    <button id="update-button">Update</button>
-    </form>
-  </main>
-  <footer></footer>
-</body>
+        <label for="password">Password</label>
+        <input type="password" id="password" />
 
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" />
+
+        <label for="name">Name</label>
+        <input type="text" id="name" autocomplete="name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" autocomplete="email" />
+
+        <button id="update-button">Update</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
 </html>

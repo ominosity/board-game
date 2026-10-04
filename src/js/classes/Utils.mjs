@@ -44,11 +44,12 @@ export async function loadHeaderFooter() {
   /* Check if the user is signed in. If not, change Account button to Login */
   const authenticator = new Authenticator();
   authenticator.init();
-  if (authenticator.isAuthenticated) {
-    const accountText = document.getElementById('accountButton');
+  const accountText = document.getElementById('accountButton');
+  if (!authenticator.isAuthenticated) {
     accountText.textContent = 'Login';
   } else {
     accountText.textContent = 'Account';
+    accountText.setAttribute('href', '/account/edit.html');
   }
 }
 
