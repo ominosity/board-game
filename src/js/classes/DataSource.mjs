@@ -33,3 +33,13 @@ export function getAvailability() {
   const results = dataSource.init();
   return results;
 }
+
+/* Retrieve the value associated with the given key from local storage */
+export function getLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+
+/* Set the JSON value and given key to local storage */
+export function setLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}

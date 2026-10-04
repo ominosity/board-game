@@ -7,6 +7,9 @@
   --secondary-color: #6a0136;
   --light-gray: rgb(230, 230, 230);
   --dark-gray: #1c1d21;
+  --outline: 2px solid var(--secondary-color);
+  --button-shadow: 3px 3px 5px var(--primary-color);
+  --pressed-button-shadow: 1px 1px 2px var(--primary-color);
 }
 
 /* Resetters */
@@ -54,9 +57,9 @@ h3,
 h4,
 h5,
 h6 {
-  border: 2px solid var(--secondary-color);
+  border: var(--outline);
   border-radius: 15px;
-  margin-bottom: 10px;
+  margin: 20px 0px;
 }
 
 /* Banner styles */
@@ -66,9 +69,19 @@ header {
     grid-template-columns: 115px 1fr;
     padding-right: 50px;
 
+    a:hover {
+      outline: var(--outline);
+    }
+
     h1 {
       font-size: 1.4em;
       align-content: center;
+    }
+  }
+
+  #hamburger-icons a img {
+    &:hover {
+      outline: var(--outline);
     }
   }
 }
@@ -126,20 +139,21 @@ nav {
 
 /* Common styles for interactive buttons and images */
 .nav-button {
-  box-shadow: 3px 3px 5px var(--primary-color);
+  box-shadow: var(--button-shadow);
   text-decoration: none;
   background-color: var(--light-gray);
   text-align: center;
+  align-content: center;
   color: var(--primary-color);
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
 
   &:active {
-    box-shadow: var(--active-button-box-shadow);
+    box-shadow: var(--pressed-button-shadow);
   }
 
   &:hover {
-    outline: var(--button-hover-outline);
+    outline: var(--outline);
   }
 }
 
@@ -193,11 +207,10 @@ footer {
       gap: 10px;
       margin-bottom: 10px;
 
-      a {
+      .nav-button {
         font-size: 1.1em;
-        border: 1px solid var(--secondary-color);
         transition: font-size 0.5s ease;
-        padding: 7px;
+        border: 1px solid var(--secondary-color);
       }
     }
   }
@@ -209,5 +222,67 @@ footer {
   }
 }
 
-
 /* Form styles */
+form {
+  font-size: 0.8em;
+  max-width: 360px;
+  margin: 10px auto;
+  padding: 20px;
+  border: var(--outline);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  label {
+    font-weight: bold;
+    align-self: center;
+    justify-self: end;
+  }
+
+  input {
+    padding: 5px;
+
+    &:focus,
+    &:hover {
+      outline: var(--outline);
+    }
+  }
+
+  button,
+  .button {
+    margin: 10px 0 0 0;
+    padding: 5px;
+    grid-column: span 2;
+    box-shadow: var(--button-shadow);
+    cursor: pointer;
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    text-align: center;
+    background-color: var(--light-gray);
+    text-decoration: none;
+    color: var(--primary-color);
+
+    &:active {
+      box-shadow: var(--pressed-button-shadow);
+    }
+
+    &:focus,
+    &:hover {
+      outline: var(--outline);
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+#success {
+  max-width: 360px;
+  margin: 10px auto;
+  padding: 20px;
+  border: var(--outline);
+  border-radius: 15px;
+  text-align: center;
+}
