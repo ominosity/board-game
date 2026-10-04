@@ -1,4 +1,4 @@
-import { loadHeaderFooter, applyTemplate } from '../classes/Utils.mjs';
+import { loadHeaderFooter } from '../classes/Utils.mjs';
 import Authenticator from '../classes/Authenticator.mjs';
 
 loadHeaderFooter();
@@ -31,7 +31,7 @@ if (signInForm) {
         name.textContent = authenticator.getLoggedInName();
       }
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   });
 }
@@ -39,7 +39,7 @@ if (signInForm) {
 if (updateForm) {
   updateForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log('update button clicked');
+    // console.log('update button clicked');
   });
 }
 
