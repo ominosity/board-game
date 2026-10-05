@@ -12,7 +12,7 @@
     <link rel="icon" href="/images/favicon.ico" />
 
     <link rel="stylesheet" href="/styles/site.css" />
-    <script src="/js/pages/account.js" type="module"></script>
+    <script src="/js/pages/browse.js" type="module"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +26,33 @@
     <header></header>
     <main>
       <h2>Browse</h2>
+      <section id="games"></section>
     </main>
     <footer></footer>
+
+    <template id="game-template">
+      <h3>Aggravation</h3>
+      <div class="panel">
+        <img
+          src="https://cf.geekdo-images.com/an4-ELSc81tAp00L8PKXdQ__small/img/Mh6uFgoMNWNY2sA1Orc6izGhg1I=/fit-in/200x150/filters:strip_icc()/pic94779.jpg"
+        />
+        <ul>
+          <li>Year published: <span class="year">1962</span></li>
+          <li>Separate Board: <span class="separate-board">Yes</span></li>
+          <li>
+            Number of Players: <span class="min-players"></span> to
+            <span class="max-players"></span>
+          </li>
+          <li>Game Location: <span class="location"></span></li>
+        </ul>
+        <p>
+          Images and additional data
+          <a href="https://boardgamegeek.com/" target="_blank"
+            ><img src="/images/bgg-logo.webp"
+          /></a>
+        </p>
+      </div>
+      <a></a>
+    </template>
   </body>
 </html>
