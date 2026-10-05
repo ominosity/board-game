@@ -4,11 +4,22 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: 'src/',
 
+  // server: {
+  //   host: '0.0.0.0',
+  //   port: Number(process.env.PORT) || 5173,
+  //   strictPort: true,
+  //   allowedHosts: ['wdd330-sleep-outside-cxfa.onrender.com'],
+  // },
+
   server: {
-    host: '0.0.0.0',
-    port: Number(process.env.PORT) || 5173,
-    strictPort: true,
-    allowedHosts: ['wdd330-sleep-outside-cxfa.onrender.com'],
+    proxy: {
+      '/bgg': {
+        target: 'https://boardgamegeek.com',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/bgg/, ''),
+      },
+    },
   },
 
   build: {
@@ -16,11 +27,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        // cart: resolve(__dirname, 'src/cart/index.html'),
-        // checkout: resolve(__dirname, 'src/checkout/index.html'),
-        // success: resolve(__dirname, 'src/checkout/success.html'),
-        // product: resolve(__dirname, 'src/product_pages/index.html'),
-        // listing: resolve(__dirname, 'src/product_listing/index.html'),
+        account: resolve(__dirname, 'src/account/index.html'),
+        register: resolve(__dirname, 'src/account/register.html'),
+        edit: resolve(__dirname, 'src/account/edit.html'),
+        browse: resolve(__dirname, 'src/browse/index.html'),
+        details: resolve(__dirname, 'src/details/index.html'),
+        favorites: resolve(__dirname, 'src/favorites/index.html'),
+        schedule: resolve(__dirname, 'src/schedule/index.html'),
+        search: resolve(__dirname, 'src/search/index.html'),
       },
     },
   },

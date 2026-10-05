@@ -1,5 +1,4 @@
 import ExternalSource from './ExternalSource';
-import { getLocalStorage } from './DataSource.mjs';
 import Authenticator from './Authenticator.mjs';
 
 /* Load the header and footer sections on all pages, along with the event listeners
@@ -80,4 +79,11 @@ export function applyTemplate(parentElement, template, clear = true) {
     }
     parentElement.appendChild(clone);
   }
+}
+
+export async function xmlToXmlDoc(xml) {
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(xml, 'text/xml');
+
+  return xmlDoc;
 }
