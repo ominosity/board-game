@@ -5,11 +5,15 @@
     "location": "Living Room",
     "separateBoard": false,
     "bggId": 2272,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 2,
@@ -17,11 +21,15 @@
     "location": "Living Room",
     "separateBoard": true,
     "bggId": 129556,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 3,
@@ -29,11 +37,15 @@
     "location": "Living Room",
     "separateBoard": false,
     "bggId": 4492,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 4,
@@ -41,11 +53,15 @@
     "location": "Living Room",
     "separateBoard": false,
     "bggId": 46213,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 5,
@@ -53,11 +69,15 @@
     "location": "Living Room",
     "separateBoard": false,
     "bggId": 8690,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 6,
@@ -65,11 +85,15 @@
     "location": "Living Room",
     "separateBoard": false,
     "bggId": 340364,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 7,
@@ -77,11 +101,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 4792,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 8,
@@ -89,11 +117,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 253664,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 9,
@@ -101,11 +133,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 2593,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 10,
@@ -113,11 +149,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": null,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 11,
@@ -125,11 +165,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 815,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 12,
@@ -137,11 +181,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 172225,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 13,
@@ -149,11 +197,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 234190,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 14,
@@ -161,11 +213,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 5312,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 15,
@@ -173,11 +229,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 1293,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 16,
@@ -185,11 +245,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 10934,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 17,
@@ -197,11 +261,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 391557,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 18,
@@ -209,11 +277,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 220547,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 19,
@@ -221,11 +293,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 16035,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 20,
@@ -233,11 +309,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 5298,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 21,
@@ -245,11 +325,15 @@
     "location": "Basket 1",
     "separateBoard": false,
     "bggId": 1269,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 22,
@@ -257,11 +341,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 32146,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 23,
@@ -269,11 +357,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 163,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 24,
@@ -281,11 +373,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 30457,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 25,
@@ -293,11 +389,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 335869,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 26,
@@ -305,11 +405,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 257880,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 27,
@@ -317,11 +421,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 227072,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 28,
@@ -329,11 +437,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 205494,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 29,
@@ -341,11 +453,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 2083,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 30,
@@ -353,11 +469,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 15239,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 31,
@@ -365,11 +485,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 131389,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 32,
@@ -377,11 +501,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 135598,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 33,
@@ -389,11 +517,15 @@
     "location": "Basket 2",
     "separateBoard": false,
     "bggId": 40508,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 34,
@@ -401,11 +533,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": 13627,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 35,
@@ -413,11 +549,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": null,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 36,
@@ -425,11 +565,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": 272438,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 37,
@@ -437,11 +581,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": 3181,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 38,
@@ -449,11 +597,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": 5749,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 39,
@@ -461,11 +613,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": 13682,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 40,
@@ -473,11 +629,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": 152959,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 41,
@@ -485,11 +645,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": 74,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 42,
@@ -497,11 +661,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": null,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 43,
@@ -509,11 +677,15 @@
     "location": "Basket 3",
     "separateBoard": true,
     "bggId": null,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 44,
@@ -521,11 +693,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": 2223,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 45,
@@ -533,11 +709,15 @@
     "location": "Basket 3",
     "separateBoard": false,
     "bggId": 209095,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 46,
@@ -545,11 +725,15 @@
     "location": "Basket 4",
     "separateBoard": false,
     "bggId": null,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 47,
@@ -557,11 +741,15 @@
     "location": "Basket 4",
     "separateBoard": false,
     "bggId": null,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 48,
@@ -569,11 +757,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 9704,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 49,
@@ -581,11 +773,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 30340,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 50,
@@ -593,11 +789,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 642,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 51,
@@ -605,11 +805,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 372931,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 52,
@@ -617,11 +821,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 1111,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 53,
@@ -629,11 +837,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 425858,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 54,
@@ -641,11 +853,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 2379,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 55,
@@ -653,11 +869,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 1836,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 56,
@@ -665,11 +885,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 4934,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 57,
@@ -677,11 +901,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 13053,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 58,
@@ -689,11 +917,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 39372,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 59,
@@ -701,11 +933,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 1962,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 60,
@@ -713,11 +949,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 1299,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 61,
@@ -725,11 +965,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 2819,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 62,
@@ -737,11 +981,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 24376,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 63,
@@ -749,11 +997,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 8039,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 64,
@@ -761,11 +1013,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 20589,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 65,
@@ -773,11 +1029,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 290557,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 66,
@@ -785,11 +1045,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 16567,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 67,
@@ -797,11 +1061,15 @@
     "location": "Basket 5",
     "separateBoard": true,
     "bggId": 920,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 68,
@@ -809,11 +1077,15 @@
     "location": "Living Room",
     "separateBoard": false,
     "bggId": 2381,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 69,
@@ -821,11 +1093,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 17850,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 70,
@@ -833,11 +1109,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 3048,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 71,
@@ -845,11 +1125,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 19621,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 72,
@@ -857,11 +1141,15 @@
     "location": "Living Room Closet",
     "separateBoard": false,
     "bggId": 64204,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 73,
@@ -869,11 +1157,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 4492,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 74,
@@ -881,11 +1173,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 171199,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 75,
@@ -893,11 +1189,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 27389,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 76,
@@ -905,11 +1205,15 @@
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 1362,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 77,
@@ -917,11 +1221,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 231302,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 78,
@@ -929,11 +1237,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 891,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 79,
@@ -941,11 +1253,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 9633,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 80,
@@ -953,11 +1269,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 181,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 81,
@@ -965,11 +1285,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 172307,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 82,
@@ -977,11 +1301,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 171,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 83,
@@ -989,11 +1317,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 5086,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 84,
@@ -1001,11 +1333,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 323367,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 85,
@@ -1013,11 +1349,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 320,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 86,
@@ -1025,11 +1365,15 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 8107,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   },
   {
     "id": 87,
@@ -1037,10 +1381,14 @@
     "location": "Closet Shelves",
     "separateBoard": false,
     "bggId": 5432,
-    "minPlayers": 0,
-    "maxPlayers": 0,
+    "minPlayers": null,
+    "maxPlayers": null,
     "year": null,
     "image": null,
-    "thumbnail": null
+    "thumbnail": null,
+    "description": null,
+    "playingTime": null,
+    "minAge": null,
+    "category": null
   }
 ]

@@ -81,6 +81,7 @@ export function applyTemplate(parentElement, template, clear = true) {
   }
 }
 
+/* Convert raw XML to an XML Doc for traversal */
 export async function xmlToXmlDoc(xml) {
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(xml, 'text/xml');

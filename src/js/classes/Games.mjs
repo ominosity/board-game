@@ -10,7 +10,16 @@ export default class Games {
   }
 
   async init() {
-    this.gamesList = await getGamesList()
+    const dataSource = new DataSource('/json/games.json', 'Games');
+    const results = await dataSource.init();
+    this.gamesList = await results;
+
+    let bggIds = [];
+    this.gamesList.forEach(game => {
+      if (game.bggId !== null) bggIds.push(game.bggId)
+    });
+
+    const bggDataXml = await downloadBGGCollection(bggIds)
   }
 
   showGames() {
@@ -18,81 +27,56 @@ export default class Games {
   }
 }
 
-/* Get a JSON array of all games in local data source */
-export async function getGamesList() {
-  const dataSource = new DataSource('/json/games.json', 'Games');
-  const results = await dataSource.init();
-  return await results;
-}
-
 /* Get a list of games from BGG in XML format and convert to JSON for processing */
-export async function getAndConvertXmlGamesToJSON() {
-  const bggCollection = await downloadBGGCollection('ominosity', 'Unwrapped7-Chef-Sandpit');
-  const bggJSON = await xmlToXmlDoc(bggCollection);
-
-  const itemList = bggJSON.querySelectorAll('item');
-
-  /* Build a JSON object by iterating through the xml document */
-  // let jsonBuilder = '';
-  let gamesList = [];
-  itemList.forEach((item, index, array) => {
+export async function convertXmlGameToJSON(xmlGame, bggId) {
     const gameObject = {
-      id: '',
-      bggID: item.getAttribute('objectid'),
-      name: item.querySelector('name').textContent,
-      year: '',
-      image: '',
-      thumbnail: '',
-      location: '',
-      separateBoard: false,
-      minPlayers: '',
-      maxPlayers: ''
+      bggID: bggId,
+      thumbnail: xmlGame.querySelector('thumbnail').textContent,
+      name: xmlGame.querySelector('name[type="primary"]').getAttribute('value'),
+      description: xmlGame.querySelector('description').textContent,
+      minPlayers: xmlGame.querySelector('minplayers').getAttribute('value'),
+      maxPlayers: xmlGame.querySelector('maxplayers').getAttribute('value')
     };
 
-    if (item.querySelector('yearpublished')) {
-      gameObject.year = item.querySelector('yearpublished').textContent;
+  if (xmlGame.querySelector('yearpublished')) {
+      gameObject.year = xmlGame.querySelector('yearpublished').getAttribute('value');
     };
 
-    if (item.querySelector('image')) {
-      gameObject.image = item.querySelector('image').textContent;
-    }
+  if (xmlGame.querySelector('image')) {
+    gameObject.image = xmlGame.querySelector('image').textContent;
+  };
 
-    if (item.querySelector('thumbnail')) {
-      gameObject.thumbnail = item.querySelector('thumbnail').textContent;
-    }
-
-    gamesList.push(gameObject);
-  });
-
-  return JSON.stringify(gamesList);
+  return gameObject;
 }
 
 export async function buildGameTemplate(template, parentElement) {
-  const bggData = await getAndConvertXmlGamesToJSON();
-  const data = await addBGGDataToLocalGameData(bggData);
+  const gameContainer = new Games();
+  gameContainer.init();
+  //const bggData = await getAndConvertXmlGamesToJSON();
+  // const data = await addBGGDataToLocalGameData(bggData);
 
-  //const data = JSON.parse(json);
-  data.forEach(game => {
-    const clone = template.content.cloneNode(true);
-    const h3 = clone.querySelector('h3');
-    const image = clone.querySelector('img');
-    const year = clone.querySelector('.year');
-    const board = clone.querySelector('.separate-board');
-    const minPlayers = clone.querySelector('.min-players');
-    const maxPlayers = clone.querySelector('.max-players');
-    const location = clone.querySelector('.location');
+  // //const data = JSON.parse(json);
+  // data.forEach(game => {
+  //   const clone = template.content.cloneNode(true);
+  //   const h3 = clone.querySelector('h3');
+  //   const image = clone.querySelector('img');
+  //   const year = clone.querySelector('.year');
+  //   const board = clone.querySelector('.separate-board');
+  //   const minPlayers = clone.querySelector('.min-players');
+  //   const maxPlayers = clone.querySelector('.max-players');
+  //   const location = clone.querySelector('.location');
 
-    h3.textContent = game.name;
-    image.src = game.thumbnail;
-    image.alt = game.name;
-    year.textContent = game.year;
-    board.textContent = game.separateBoard ? 'Yes' : 'No';
-    minPlayers.textContent = game.minPlayers;
-    maxPlayers.textContent = game.maxPlayers;
-    location.textContent = game.location;
+  //   h3.textContent = game.name;
+  //   image.src = game.thumbnail;
+  //   image.alt = game.name;
+  //   year.textContent = game.year;
+  //   board.textContent = game.separateBoard ? 'Yes' : 'No';
+  //   minPlayers.textContent = game.minPlayers;
+  //   maxPlayers.textContent = game.maxPlayers;
+  //   location.textContent = game.location;
 
-    parentElement.appendChild(clone);
-  });
+  //   parentElement.appendChild(clone);
+  // });
 }
 
 export async function addBGGDataToLocalGameData(json) {
