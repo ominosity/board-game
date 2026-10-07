@@ -34,7 +34,7 @@ export default class Games {
   }
 
   /* Get the list of games as an array of game objects */
-  getGames() {
+  async getGames() {
     return this.gamesList;
   }
 }
@@ -160,7 +160,7 @@ export async function buildGameTemplate(template, parentElement) {
   await gameContainer.init();
 
   // Apply games in list to the template and add to the DOM
-  const gamesList = gameContainer.getGames();
+  const gamesList = await gameContainer.getGames();
   gamesList.forEach(game => {
     /* Create holders for the UI elements */
     const clone = template.content.cloneNode(true);
