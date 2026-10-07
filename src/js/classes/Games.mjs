@@ -33,6 +33,7 @@ export default class Games {
     }
   }
 
+  /* Get the list of games as an array of game objects */
   getGames() {
     return this.gamesList;
   }
