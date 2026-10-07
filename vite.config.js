@@ -4,22 +4,11 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: 'src/',
 
-  // server: {
-  //   host: '0.0.0.0',
-  //   port: Number(process.env.PORT) || 5173,
-  //   strictPort: true,
-  //   allowedHosts: ['wdd330-sleep-outside-cxfa.onrender.com'],
-  // },
-
   server: {
-    proxy: {
-      '/bgg': {
-        target: 'https://boardgamegeek.com',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/bgg/, ''),
-      },
-    },
+    host: '0.0.0.0',
+    port: Number(process.env.PORT) || 5173,
+    strictPort: true,
+    allowedHosts: ['https://burgener-chalet-board-games.onrender.com/'],
   },
 
   build: {
