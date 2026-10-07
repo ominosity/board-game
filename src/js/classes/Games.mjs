@@ -157,7 +157,7 @@ export async function buildGameTemplate(template, parentElement) {
   // Get full games list from all sources by creating a Games object 
   // and initializing it
   const gameContainer = new Games();
-  gameContainer.init();
+  await gameContainer.init();
 
   // Apply games in list to the template and add to the DOM
   const gamesList = gameContainer.getGames();
