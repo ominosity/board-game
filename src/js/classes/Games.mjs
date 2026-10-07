@@ -10,25 +10,24 @@ export default class Games {
   }
 
   async init() {
-    if (getLocalStorage('BCGamesList'))
-    {
+    if (getLocalStorage('BCGamesList')) {
       this.gamesList = JSON.parse(getLocalStorage('BCGamesList'));
     } else {
 
       const dataSource = new DataSource('/json/games.json', 'Games');
       const results = await dataSource.init();
       this.gamesList = await results;
-      
+
       let bggIds = [];
       this.gamesList.forEach(game => {
         if (game.bggId !== null) bggIds.push(game.bggId)
-        });
-      
+      });
+
       const bggData = await downloadBGGCollection(bggIds)
       const combinedData = await mergeLocalAndBggDatasets(this.gamesList, bggData);
-      
+
       this.gamesList = combinedData;
-      
+
       // Write to local storage so we're not hitting the API every query
       setLocalStorage('BCGamesList', JSON.stringify(this.gamesList));
     }
@@ -106,43 +105,43 @@ export async function mergeLocalAndBggDatasets(localData, bggData) {
   const mergedData = localData.map(game => {
     const match = bggData.find(item => Number(item.bggID) === game.bggId);
     if (match !== undefined) {
-      
+
       if (match.year) {
         game.year = match.year;
       }
-      
+
       if (match.image) {
         game.image = match.image;
       }
-      
+
       if (match.thumbnail) {
         game.thumbnail = match.thumbnail;
       }
-      
+
       if (match.description) {
         game.description = match.description;
       }
-      
+
       if (match.minPlayers) {
         game.minPlayers = match.minPlayers;
       }
-      
+
       if (match.maxPlayers) {
         game.maxPlayers = match.maxPlayers;
       }
-      
+
       if (match.playingTime) {
         game.playingTime = match.playingTime;
-      }      
-      
+      }
+
       if (match.minAge) {
         game.minAge = match.minAge;
       }
-      
+
       if (match.category) {
         game.category = match.category;
       }
-      
+
       if (match.rating) {
         game.rating = match.rating;
       }
@@ -154,31 +153,54 @@ export async function mergeLocalAndBggDatasets(localData, bggData) {
 
 /* Apply games list to template */
 export async function buildGameTemplate(template, parentElement) {
+  // Get full games list from all sources by creating a Games object 
+  // and initializing it
   const gameContainer = new Games();
   gameContainer.init();
-  //const bggData = await getAndConvertXmlGamesToJSON();
-  // const data = await addBGGDataToLocalGameData(bggData);
 
-  // //const data = JSON.parse(json);
-  // data.forEach(game => {
-  //   const clone = template.content.cloneNode(true);
-  //   const h3 = clone.querySelector('h3');
-  //   const image = clone.querySelector('img');
-  //   const year = clone.querySelector('.year');
-  //   const board = clone.querySelector('.separate-board');
-  //   const minPlayers = clone.querySelector('.min-players');
-  //   const maxPlayers = clone.querySelector('.max-players');
-  //   const location = clone.querySelector('.location');
+  // Apply games in list to the template and add to the DOM
+  const gamesList = gameContainer.getGames();
+  gamesList.forEach(game => {
+    /* Create holders for the UI elements */
+    const clone = template.content.cloneNode(true);
+    const h3 = clone.querySelector('h3');
+    const image = clone.querySelector('img');
+    const year = clone.querySelector('.year');
+    const board = clone.querySelector('.separate-board');
+    const players = clone.querySelector('.players');
+    const location = clone.querySelector('.location');
+    const playingTime = clone.querySelector('.playtime');
+    const minAge = clone.querySelector('.min-age')
+    const category = clone.querySelector('.category');
+    const rating = clone.querySelector('.rating');
+    const description = clone.querySelector('.description');
 
-  //   h3.textContent = game.name;
-  //   image.src = game.thumbnail;
-  //   image.alt = game.name;
-  //   year.textContent = game.year;
-  //   board.textContent = game.separateBoard ? 'Yes' : 'No';
-  //   minPlayers.textContent = game.minPlayers;
-  //   maxPlayers.textContent = game.maxPlayers;
-  //   location.textContent = game.location;
+    /* Fill out UI with full game data */
+    if (game.name) h3.textContent = game.name;
+    if (image) image.src = game.image;
+    if (image) image.alt = game.name;
+    if (year) year.textContent = game.year;
+    if (board) board.textContent = game.separateBoard ? 'Yes' : 'No';
+    if (players) players.textContent = `${game.minPlayers} to ${game.maxPlayers}`;
+    if (location) location.textContent = game.location;
+    if (playingTime) playingTime.textContent = `${game.playingTime} minutes (avg)`;
+    if (minAge) minAge.textContent = `${game.minAge} years old`;
+    if (category) category.textContent = game.category;
+    if (rating) rating.textContent = game.rating;
+    if (description) description.innerHTML = game.description;
 
-  //   parentElement.appendChild(clone);
-  // });
+    /* Hide BGG elements if no BGG data (lack of image is key) */
+    if (game.image === null) {
+      if (image) image.classList.add('hide');
+      if (year) year.classList.add('hide');
+      if (players) players.classList.add('hide');
+      if (playingTime) playingTime.classList.add('hide');
+      if (minAge) minAge.classList.add('hide');
+      if (category) category.classList.add('hide');
+      if (rating) rating.classList.add('hide');
+      if (description) description.classList.add('hide');
+      clone.querySelector('.bgg-link').classList.add('hide');
+    }
+    parentElement.appendChild(clone);
+  });
 }

@@ -1,58 +1,60 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Browse Games - Burgener Chalet Board Games</title>
-    <meta name="author" content="Richard Burgener" />
-    <meta
-      name="description"
-      content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet"
-    />
-    <link rel="icon" href="/images/favicon.ico" />
 
-    <link rel="stylesheet" href="/styles/site.css" />
-    <script src="/js/pages/browse.js" type="module"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Games - Burgener Chalet Board Games</title>
+  <meta name="author" content="Richard Burgener" />
+  <meta name="description"
+    content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet" />
+  <link rel="icon" href="/images/favicon.ico" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <link rel="stylesheet" href="/styles/site.css" />
+  <script src="/js/pages/browse.js" type="module"></script>
 
-  <body>
-    <header></header>
-    <main>
-      <h2>Browse</h2>
-      <section id="games"></section>
-    </main>
-    <footer></footer>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap" rel="stylesheet" />
+</head>
 
-    <template id="game-template">
-      <h3>Aggravation</h3>
-      <div class="panel">
-        <img
-          src="https://cf.geekdo-images.com/an4-ELSc81tAp00L8PKXdQ__small/img/Mh6uFgoMNWNY2sA1Orc6izGhg1I=/fit-in/200x150/filters:strip_icc()/pic94779.jpg"
-        />
-        <ul>
-          <li>Year published: <span class="year">1962</span></li>
-          <li>Separate Board: <span class="separate-board">Yes</span></li>
-          <li>
-            Number of Players: <span class="min-players"></span> to
-            <span class="max-players"></span>
-          </li>
-          <li>Game Location: <span class="location"></span></li>
-        </ul>
-        <p>
-          Images and additional data
-          <a href="https://boardgamegeek.com/" target="_blank"
-            ><img src="/images/bgg-logo.webp"
-          /></a>
-        </p>
+<body>
+  <header></header>
+  <main>
+    <h2>Browse</h2>
+    <section id="games"></section>
+  </main>
+  <footer></footer>
+
+  <template id="game-template">
+    <div class="panel">
+      <a href="#" class="details">
+        <h3></h3>
+      </a>
+      <a href="#" class="details" loading="lazy">
+        <img class="gamePic">
+      </a>
+      <ul>
+        <!-- <li>Year published: <span class="year"></span></li> -->
+        <li class="li-category">Category: <span class="category"></span></li>
+        <li class="li-separate-board">Separate Board: <span class="separate-board"></span></li>
+        <li class="li-players">Number of Players: <span class="players"></span>
+        </li>
+        <li class="li-playtime">Average game time: <span class="playtime"></span></li>
+        <li class="li-min-age">Minimum recommended age: <span class="min-age"></span></li>
+        <!-- <li>Average BGG user rating: <span class="rating"></span></li> -->
+        <li>Game Location: <span class="location"></span></li>
+      </ul>
+      <!-- <p class="description"></p> -->
+       <div class="bgg-link">
+      <a href="https://boardgamegeek.com/" target="_blank">
+        <figure>
+          <figcaption>Images and additional data</figcaption>
+          <img class="bgg-logo" src="/images/bgg-logo.webp" loading="lazy"/>
+      </a>
       </div>
-      <a></a>
-    </template>
-  </body>
+    </div>
+  </template>
+</body>
+
 </html>

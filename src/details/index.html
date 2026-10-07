@@ -26,7 +26,38 @@
     <header></header>
     <main>
       <h2>Game Details</h2>
+      <section id="game"></section>
     </main>
+
     <footer></footer>
+  <template id="game-template">
+    <div class="panel">
+      <a href="#" class="details">
+        <h3></h3>
+      </a>
+      <a href="#" class="details" loading="lazy">
+        <img class="gamePic">
+      </a>
+      <ul>
+        <li>Year published: <span class="year"></span></li>
+        <li class="li-category">Category: <span class="category"></span></li>
+        <li class="li-separate-board">Separate Board: <span class="separate-board"></span></li>
+        <li class="li-players">Number of Players: <span class="players"></span>
+        </li>
+        <li class="li-playtime">Average game time: <span class="playtime"></span></li>
+        <li class="li-min-age">Minimum recommended age: <span class="min-age"></span></li>
+        <li>Average BGG user rating: <span class="rating"></span></li>
+        <li>Game Location: <span class="location"></span></li>
+      </ul>
+      <p class="description"></p>
+      <div class="bgg-link">
+        <a href="https://boardgamegeek.com/" target="_blank">
+          <figure>
+            <figcaption>Images and additional data</figcaption>
+            <img class="bgg-logo" src="/images/bgg-logo.webp" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </template>
   </body>
 </html>
