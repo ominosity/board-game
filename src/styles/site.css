@@ -157,6 +157,7 @@ nav {
   }
 }
 
+/* Styles for shared footers */
 footer {
   font-size: 0.8em;
   position: sticky;
@@ -183,6 +184,52 @@ footer {
     border: 1px solid var(--secondary-color);
     border-radius: 15px;
   }
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  margin-bottom: 35px;
+
+  #hero-text {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.2em;
+    background-color: var(--dark-gray);
+    opacity: .8;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  img.hero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1500px;
+    border-radius: 15px;
+    box-shadow: var(--button-shadow);
+  }
+
+  .logo-holder {
+    position: absolute;
+    left: calc(50% - 37px);
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid var(--primary-color);
+    width: 95px;
+    margin-top: -65px;
+    box-shadow: var(--button-shadow);
+
+    img {
+      width: 75px;
+      display: block;
+      margin: 10px auto;
+    }
+  }
+
 }
 
 /* Transition layout to full-sized screens */
