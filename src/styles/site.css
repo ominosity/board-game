@@ -62,6 +62,32 @@ h6 {
   margin: 20px 0px;
 }
 
+section {
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+figure.photo-with-caption {
+  margin-bottom: 15px;
+
+  figcaption {
+    font-size: .9em;
+    text-align: center;
+    background: var(--light-gray);
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 15px;
+    border: 3px solid var(--primary-color);
+  }
+}
 /* Banner styles */
 header {
   #banner {
@@ -187,9 +213,15 @@ footer {
 }
 
 #hero {
-  position: relative;
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 50px;
+
+  #hero-image-container {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    max-width: 1000px;
+  }
 
   #hero-text {
     position: absolute;
@@ -205,10 +237,12 @@ footer {
 
   img.hero {
     display: block;
+    min-height: 120px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1000px;
+    max-height: 40%;
     border-radius: 15px;
     box-shadow: var(--button-shadow);
   }
@@ -219,12 +253,12 @@ footer {
     background-color: #fff;
     border-radius: 15px;
     border: 1px solid var(--primary-color);
-    width: 95px;
+    width: 115px;
     margin-top: -65px;
     box-shadow: var(--button-shadow);
 
     img {
-      width: 75px;
+      width: 100px;
       display: block;
       margin: 10px auto;
     }
