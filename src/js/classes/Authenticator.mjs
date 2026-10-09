@@ -16,9 +16,9 @@ export default class Authenticator {
     /* No usernames or passwords on file */
     if (!this.users || this.users.length === 0) {
       this.loggedIn = false;
-    } 
+    }
 
-    if (this.loggedInUser) {
+    if (this.loggedInUser !== false) {
       this.loggedIn = true;
     }
   }
@@ -35,15 +35,25 @@ export default class Authenticator {
       name: name,
       email: email
     }
+    if (!this.users) {
+      this.users = [];
+    }
     this.users.push(newUser);
     setLocalStorage('BCGamesUsers', this.users);
   }
 
   /* Attempt to log in with the given username and password */
-  login(username, password) {
+  login(username, password, passwordValidationElement) {
     // Reset logged in status and user
     this.loggedInUser = null;
     this.loggedIn = false;
+
+    // Check if there are any local accounts logged
+    if (!this.users || this.users.length === 0) {
+      passwordValidationElement.setCustomValidity('No accounts on file. Please create an account');
+      passwordValidationElement.reportValidity();
+      return false;
+    }
 
     // Search local storage for matching user and password
     const user = this.users.find(user => user.username === username && user.password === password);
@@ -52,22 +62,12 @@ export default class Authenticator {
       this.loggedIn = true;
 
       setLocalStorage('BCGamesCurrentUser', this.loggedInUser);
+      return true;
+    } else {
+      passwordValidationElement.setCustomValidity('Invalid username or password');
+      passwordValidationElement.reportValidity();
+      return false;
     }
-
-    // this.users.forEach(element => {
-    //   if (element.username === username && element.password === password) {
-    //     this.loggedInUser = element.username;
-    //     this.loggedIn = true;
-    //   };
-    // });
-
-    // Throw an exception if authentication unsuccessful
-    if (this.loggedInUser === null) {
-      throw new Error('User not found');
-    }
-
-    // Otherwise let the caller know authentication was successful
-    return true;
   }
 
   getLoggedInName() {
@@ -77,5 +77,10 @@ export default class Authenticator {
       );
       return userObject['name'];
     }
+  }
+
+  logout() {
+    setLocalStorage('BCGamesCurrentUser', null);
+    window.location.replace('./index.html');
   }
 }

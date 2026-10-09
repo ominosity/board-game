@@ -6,8 +6,14 @@ loadHeaderFooter();
 const authenticator = new Authenticator();
 authenticator.init();
 
+if (!authenticator.isAuthenticated)
+{
+  window.location.replace('./index.html');
+}
+
 const signInForm = document.getElementById('sign-in-form');
-const updateForm = document.getElementById('update-form');
+const editForm = document.getElementById('edit-form');
+const signOutButton = document.getElementById('sign-out');
 const registerForm = document.getElementById('register-form');
 
 // if (!authenticator.isAuthenticated()) {
@@ -17,13 +23,15 @@ const registerForm = document.getElementById('register-form');
 if (signInForm) {
   signInForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const checkUsername = document.getElementById('username').value;
-    const checkPassword = document.getElementById('password').value;
+    const userNameValidationElement = document.getElementById('username');
+    const checkUsername = userNameValidationElement.value;
+    const passwordValidationElement = document.getElementById('password');
+    const checkPassword = passwordValidationElement.value;
 
     authenticator.init();
 
     try {
-      const results = authenticator.login(checkUsername, checkPassword);
+      const results = authenticator.login(checkUsername, checkPassword, userNameValidationElement);
       if (results) {
         signInForm.classList.add('hide');
         document.getElementById('success').classList.remove('hide');
@@ -36,10 +44,15 @@ if (signInForm) {
   });
 }
 
-if (updateForm) {
-  updateForm.addEventListener('submit', (event) => {
+if (editForm) {
+  editForm.addEventListener('submit', (event) => {
     event.preventDefault();
     // console.log('update button clicked');
+  });
+
+  signOutButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    authenticator.logout();
   });
 }
 
