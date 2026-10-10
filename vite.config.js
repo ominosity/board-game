@@ -20,7 +20,7 @@ export default defineConfig({
         account: resolve(__dirname, 'src/account/index.html'),
         register: resolve(__dirname, 'src/account/register.html'),
         edit: resolve(__dirname, 'src/account/edit.html'),
-        browse: resolve(__dirname, 'src/browse/index.html'),
+        games: resolve(__dirname, 'src/games/index.html'),
         details: resolve(__dirname, 'src/details/index.html'),
         favorites: resolve(__dirname, 'src/favorites/index.html'),
         schedule: resolve(__dirname, 'src/schedule/index.html'),
