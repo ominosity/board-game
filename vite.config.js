@@ -24,7 +24,6 @@ export default defineConfig({
         details: resolve(__dirname, 'src/details/index.html'),
         favorites: resolve(__dirname, 'src/favorites/index.html'),
         schedule: resolve(__dirname, 'src/schedule/index.html'),
-        search: resolve(__dirname, 'src/search/index.html'),
       },
     },
   },
