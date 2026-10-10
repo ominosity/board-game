@@ -90,7 +90,7 @@ if (editForm) {
   editForm.addEventListener('submit', (event) => {
     event.preventDefault();
     if (passwordElement.value !== confirmPasswordElement.value) {
-      passwordElement.setCustomValidity("Passwords don't match!");
+      passwordElement.setCustomValidity(`Passwords don't match!`);
       passwordElement.reportValidity();
     } else {
       const username = authenticator.updateUser(
