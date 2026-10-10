@@ -224,7 +224,7 @@ nav {
 
 /* Styles for shared footers */
 footer {
-  font-size: 0.8em;
+  font-size: 0.7em;
   position: sticky;
   bottom: 0px;
   left: 0px;
@@ -248,6 +248,10 @@ footer {
     min-height: 44px;
     border: 1px solid var(--secondary-color);
     border-radius: 15px;
+  }
+
+  p {
+    margin-bottom: 5px;
   }
 }
 
@@ -372,7 +376,7 @@ form {
     }
   }
 
-
+  select:
 }
 
 .hide {
@@ -396,7 +400,7 @@ form {
   gap: 10px;
   justify-content: center;
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 501px) {
       flex-direction: row;
     }
 
@@ -407,7 +411,7 @@ form {
     padding: 0px 10px 10px 10px;
     max-width: 100%;
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 501px) {
       max-width: 300px;
     }
 

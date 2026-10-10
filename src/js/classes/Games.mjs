@@ -9,6 +9,8 @@ export default class Games {
     this.gamesList = [];
   }
 
+  /* Initialize this Games object to get the games from local storage or
+     a combination of local storage and the BGG API */
   async init() {
     if (getLocalStorage('BCGamesList')) {
       this.gamesList = JSON.parse(getLocalStorage('BCGamesList'));
@@ -36,6 +38,36 @@ export default class Games {
   /* Get the list of games as an array of game objects */
   async getGames() {
     return this.gamesList;
+  }
+
+  sortOrFilterGames(option) {
+    switch (option) {
+      case 'name-a-z': return this.gamesList.sort((a, b) => a.name.localeCompare(b.name));
+      case 'name-z-a': return this.gamesList.sort((a, b) => b.name.localeCompare(a.name));
+      case 'time-asc': return this.gamesList.sort((a, b) => a.playingTime - b.playingTime);
+      case 'time-desc': return this.gamesList.sort((a, b) => b.playingTime - a.playingTime);
+      case 'min-asc': return this.gamesList.sort((a, b) => a.minPlayers - b.minPlayers);
+      case 'min-desc': return this.gamesList.sort((a, b) => b.minPlayers - a.minPlayers);
+      case 'max-asc': return this.gamesList.sort((a, b) => a.maxPlayers - b.maxPlayers);
+      case 'max-desc': return this.gamesList.sort((a, b) => b.maxPlayers - a.maxPlayers);
+      case 'living-room': return this.gamesList.filter(game => game.location === 'Living Room');
+      case '1': return this.gamesList.filter(game => game.location === 'Basket 1');
+      case '2': return this.gamesList.filter(game => game.location === 'Basket 2');
+      case '3': return this.gamesList.filter(game => game.location === 'Basket 3');
+      case '4': return this.gamesList.filter(game => game.location === 'Basket 4');
+      case '5': return this.gamesList.filter(game => game.location === 'Basket 5');
+      case '6': return this.gamesList.filter(game => game.location === 'Basket 6');
+      case 'closet': return this.gamesList.filter(game => game.location === 'Closet Shelves');
+    }
+  }
+
+  search(term) {
+    const lowerTerm = term.toLowerCase();
+    const results = this.gamesList.filter(game =>
+      game.name.toLowerCase().includes(lowerTerm)
+    );
+
+    return results || [];
   }
 }
 
@@ -153,7 +185,7 @@ export async function mergeLocalAndBggDatasets(localData, bggData) {
 }
 
 /* Apply games list to template */
-export async function buildGameTemplate(template, parentElement) {
+export async function loadAllGamesToParent(template, parentElement) {
   // Get full games list from all sources by creating a Games object 
   // and initializing it
   const gameContainer = new Games();
@@ -161,7 +193,28 @@ export async function buildGameTemplate(template, parentElement) {
 
   // Apply games in list to the template and add to the DOM
   const gamesList = await gameContainer.getGames();
-  gamesList.forEach(game => {
+  await applyGamesTemplate(gamesList, template, parentElement);
+}
+
+/* Load games, sort or filter them, and output them to the template */
+export async function sortOrFilterGamesToTemplateAndParent(template, parentElement, option) {
+  // Clear parent
+  parentElement.replaceChildren();
+  // Get full games list from all sources by creating a Games object 
+  // and initializing it
+  const gameContainer = new Games();
+  await gameContainer.init();
+
+  // Sort or filter games according to selected option
+  const newList = gameContainer.sortOrFilterGames(option);
+
+  // Apply games in list to the template and add to the DOM
+  await applyGamesTemplate(newList, template, parentElement);
+}
+
+/* Apply given data to games template and output to parent element */
+export async function applyGamesTemplate(data, template, parentElement) {
+  data.forEach(game => {
     /* Create holders for the UI elements */
     const clone = template.content.cloneNode(true);
     const h3 = clone.querySelector('h3');
@@ -185,7 +238,7 @@ export async function buildGameTemplate(template, parentElement) {
     if (board) board.textContent = game.separateBoard ? 'Yes' : 'No';
     if (players) players.textContent = `${game.minPlayers} to ${game.maxPlayers}`;
     if (location) location.textContent = game.location;
-    if (playingTime) playingTime.textContent = `${game.playingTime} minutes (avg)`;
+    if (playingTime && game.playingTime > 0) playingTime.textContent = `${game.playingTime} minutes`;
     if (minAge) minAge.textContent = `${game.minAge} years old`;
     if (category) category.textContent = game.category;
     if (rating) rating.textContent = game.rating;
@@ -208,4 +261,23 @@ export async function buildGameTemplate(template, parentElement) {
     }
     parentElement.appendChild(clone);
   });
+}
+
+export async function searchGames(term, template, parentElement) {
+  // Clear parent
+  parentElement.replaceChildren();
+  // Get full games list from all sources by creating a Games object 
+  // and initializing it
+  const gameContainer = new Games();
+  await gameContainer.init();
+
+  // Search games according to submitted term
+  const newList = gameContainer.search(term);
+
+  if (newList.length === 0) {
+    parentElement.innerHTML = `<div class="panel"><h3> No games found </h3> <br><p>We're sorry, but no games match the search term "<strong>${term}</strong>."</p><p>Please try another sort, filter, or search.</p></div>`
+  } else {
+    // Apply games in list to the template and add to the DOM
+    await applyGamesTemplate(newList, template, parentElement);
+  }
 }

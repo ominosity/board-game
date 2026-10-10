@@ -849,7 +849,7 @@
   },
   {
     "id": 54,
-    "name": "Gesstures",
+    "name": "Guesstures",
     "location": "Basket 5",
     "separateBoard": false,
     "bggId": 2379,
@@ -866,7 +866,7 @@
   {
     "id": 55,
     "name": "Solarquest",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 1836,
     "minPlayers": null,
@@ -882,7 +882,7 @@
   {
     "id": 56,
     "name": "Battling Tops",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 4934,
     "minPlayers": null,
@@ -898,7 +898,7 @@
   {
     "id": 57,
     "name": "Book of Mormon Challenge",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 13053,
     "minPlayers": null,
@@ -914,7 +914,7 @@
   {
     "id": 58,
     "name": "The Crazy Cat Lady Game",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 39372,
     "minPlayers": null,
@@ -930,7 +930,7 @@
   {
     "id": 59,
     "name": "Tribond",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 1962,
     "minPlayers": null,
@@ -946,7 +946,7 @@
   {
     "id": 60,
     "name": "Trivial Pursuit Genus IV",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 1299,
     "minPlayers": null,
@@ -962,7 +962,7 @@
   {
     "id": 61,
     "name": "Trivial Pursuit Genus 5",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 2819,
     "minPlayers": null,
@@ -978,7 +978,7 @@
   {
     "id": 62,
     "name": "Trivial Pursuit Totally 80s",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 24376,
     "minPlayers": null,
@@ -994,7 +994,7 @@
   {
     "id": 63,
     "name": "Trivial Pursuit DVD Pop Culture",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 8039,
     "minPlayers": null,
@@ -1010,7 +1010,7 @@
   {
     "id": 64,
     "name": "Trivial Pursuit DVD Pop Culture: Second Edition",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 20589,
     "minPlayers": null,
@@ -1026,7 +1026,7 @@
   {
     "id": 65,
     "name": "Trivial Pursuit: Netflix's Stranger Things - Back to the 80s Edition",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 290557,
     "minPlayers": null,
@@ -1042,7 +1042,7 @@
   {
     "id": 66,
     "name": "Can You Beat Ken",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 16567,
     "minPlayers": null,
@@ -1058,7 +1058,7 @@
   {
     "id": 67,
     "name": "Ultimate Outburst",
-    "location": "Basket 5",
+    "location": "Basket 6",
     "separateBoard": true,
     "bggId": 920,
     "minPlayers": null,
