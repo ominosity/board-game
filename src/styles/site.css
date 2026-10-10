@@ -97,10 +97,12 @@ figure.photo-with-caption {
     align-items: center;
 
     &:nth-of-type(2) {
-      direction: rtl; /* Reverse the order to alternate images */
+      direction: rtl;
+      /* Reverse the order to alternate images */
     }
   }
 }
+
 /* Banner styles */
 header {
   #banner {
@@ -327,6 +329,7 @@ form {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 
+
   label {
     font-weight: bold;
     align-self: center;
@@ -339,6 +342,10 @@ form {
     &:focus,
     &:hover {
       outline: var(--outline);
+    }
+
+    &:read-only {
+      background-color: var(--light-gray);
     }
   }
 
@@ -365,6 +372,7 @@ form {
       outline: var(--outline);
     }
   }
+
 }
 
 .hide {
@@ -455,6 +463,7 @@ form {
     div.bgg-link {
       align-self: end;
     }
+
     figure {
       margin-top: auto;
       font-size: 0.8em;

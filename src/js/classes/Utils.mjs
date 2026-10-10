@@ -42,10 +42,11 @@ export async function loadHeaderFooter() {
 
   /* Check if the user is signed in. If not, change Account button to Login */
   const authenticator = new Authenticator();
-  authenticator.init();
+  await authenticator.init();
   const accountText = document.getElementById('accountButton');
-  if (!authenticator.isAuthenticated) {
+  if (!authenticator.isAuthenticated()) {
     accountText.textContent = 'Login';
+    accountText.setAttribute('href', '/account/index.html');
   } else {
     accountText.textContent = 'Account';
     accountText.setAttribute('href', '/account/edit.html');
@@ -58,7 +59,7 @@ async function loadTemplate(path) {
   return await response.text();
 }
 
-/* Convert a given respons to JSON format, if possible */
+/* Convert a given response to JSON format, if possible */
 export async function convertToJson(response) {
   if (response.ok) {
     return response.json();
