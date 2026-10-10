@@ -40,7 +40,12 @@ if (signInForm) {
     // authenticator.init();
 
     try {
-      const results = authenticator.login(checkUsername, checkPassword, userNameValidationElement, accountText);
+      const results = authenticator.login(
+        checkUsername,
+        checkPassword,
+        userNameValidationElement,
+        accountText,
+      );
       if (results) {
         signInForm.classList.add('hide');
         document.getElementById('success').classList.remove('hide');
@@ -70,7 +75,7 @@ if (editForm) {
   /* Preload form with user information */
   const users = authenticator.users;
   const loggedInUser = await authenticator.loginUsername();
-  const thisUser = users.find(user => user.username === loggedInUser);
+  const thisUser = users.find((user) => user.username === loggedInUser);
   usernameElement.value = thisUser.username;
   nameElement.value = thisUser.name;
   emailElement.value = thisUser.email;
@@ -85,10 +90,16 @@ if (editForm) {
   editForm.addEventListener('submit', (event) => {
     event.preventDefault();
     if (passwordElement.value !== confirmPasswordElement.value) {
-      passwordElement.setCustomValidity('Passwords don\'t match!');
+      passwordElement.setCustomValidity("Passwords don't match!");
       passwordElement.reportValidity();
     } else {
-      const username = authenticator.updateUser(usernameElement, passwordElement, confirmPasswordElement, nameElement, emailElement);
+      const username = authenticator.updateUser(
+        usernameElement,
+        passwordElement,
+        confirmPasswordElement,
+        nameElement,
+        emailElement,
+      );
 
       alert(`User ${username} successfully updated!`);
     }
@@ -113,7 +124,7 @@ if (registerForm) {
     usernameElement.setCustomValidity('');
     usernameElement.reportValidity();
   });
-  
+
   registerForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const username = document.getElementById('new-username');
