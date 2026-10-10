@@ -178,8 +178,9 @@ export async function buildGameTemplate(template, parentElement) {
 
     /* Fill out UI with full game data */
     if (game.name) h3.textContent = game.name;
-    if (image) image.src = game.image;
+    if (image) image.src = game.thumbnail;
     if (image) image.alt = game.name;
+    if (image) image.loading = 'lazy';
     if (year) year.textContent = game.year;
     if (board) board.textContent = game.separateBoard ? 'Yes' : 'No';
     if (players) players.textContent = `${game.minPlayers} to ${game.maxPlayers}`;
@@ -195,12 +196,15 @@ export async function buildGameTemplate(template, parentElement) {
       if (image) image.classList.add('hide');
       if (year) year.classList.add('hide');
       if (players) players.classList.add('hide');
+      if (clone.querySelector('.li-players')) clone.querySelector('.li-players').classList.add('hide');
       if (playingTime) playingTime.classList.add('hide');
+      if (clone.querySelector('.li-playtime')) clone.querySelector('.li-playtime').classList.add('hide');
       if (minAge) minAge.classList.add('hide');
       if (category) category.classList.add('hide');
+      if (clone.querySelector('.li-category')) clone.querySelector('.li-category').classList.add('hide');
       if (rating) rating.classList.add('hide');
       if (description) description.classList.add('hide');
-      clone.querySelector('.bgg-link').classList.add('hide');
+      clone.querySelector('.bgg-link a figure img').classList.add('hide');
     }
     parentElement.appendChild(clone);
   });

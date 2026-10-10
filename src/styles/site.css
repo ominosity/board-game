@@ -71,6 +71,30 @@ p {
   margin-bottom: 15px;
 }
 
+button,
+.button {
+  margin: 10px 0 0 0;
+  padding: 5px;
+  grid-column: span 2;
+  box-shadow: var(--button-shadow);
+  cursor: pointer;
+  border: 1px solid var(--secondary-color);
+  border-radius: 15px;
+  text-align: center;
+  background-color: var(--light-gray);
+  text-decoration: none;
+  color: var(--primary-color);
+
+  &:active {
+    box-shadow: var(--pressed-button-shadow);
+  }
+
+  &:focus,
+  &:hover {
+    outline: var(--outline);
+  }
+}
+
 figure.photo-with-caption {
   margin-bottom: 15px;
 
@@ -348,29 +372,7 @@ form {
     }
   }
 
-  button,
-  .button {
-    margin: 10px 0 0 0;
-    padding: 5px;
-    grid-column: span 2;
-    box-shadow: var(--button-shadow);
-    cursor: pointer;
-    border: 1px solid var(--secondary-color);
-    border-radius: 15px;
-    text-align: center;
-    background-color: var(--light-gray);
-    text-decoration: none;
-    color: var(--primary-color);
 
-    &:active {
-      box-shadow: var(--pressed-button-shadow);
-    }
-
-    &:focus,
-    &:hover {
-      outline: var(--outline);
-    }
-  }
 }
 
 .hide {
@@ -389,25 +391,33 @@ form {
 /* Styles for Browse page */
 #games {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
+
+    @media screen and (min-width: 500px) {
+      flex-direction: row;
+    }
 
   div.panel {
     display: grid;
     border: var(--outline);
     border-radius: 15px;
-    max-width: 400px;
     padding: 0px 10px 10px 10px;
+    max-width: 100%;
+
+    @media screen and (min-width: 500px) {
+      max-width: 300px;
+    }
 
     h3 {
       border-top: none;
       border-right: none;
       border-left: none;
-      margin-top: 1px;
-      margin-left: -10px;
-      margin-right: -10px;
+      margin: 1px -10px 0 -10px;
       box-shadow: var(--button-shadow);
+      font-size: .9em;
 
       &:active {
         box-shadow: var(--pressed-button-shadow);
@@ -426,11 +436,17 @@ form {
       color: var(--primary-color);
     }
 
+    div.inner-container {
+      display: grid;
+      grid-template-columns: 30% 1fr;
+      align-items: center;
+    }
+    
     img.gamePic {
       border: 1px solid var(--primary-color);
       box-shadow: var(--button-shadow);
-      max-width: 400px;
       max-width: 100%;
+      margin-top: 10px;
 
       &:active {
         box-shadow: var(--pressed-button-shadow);
@@ -446,8 +462,9 @@ form {
       margin: 10px 20px;
 
       li {
+        list-style-type: none;
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 0.7em;
 
         span {
           font-weight: normal;
@@ -457,7 +474,6 @@ form {
     }
 
     /* Styles for the Powered by BGG icons */
-
     div.bgg-link {
       align-self: end;
     }
@@ -466,7 +482,8 @@ form {
       margin-top: auto;
       font-size: 0.8em;
       align-self: center;
-
+      min-height: 44px;
+      align-content: center;
       border: 1px solid black;
       border-radius: 10px;
       box-shadow: var(--button-shadow);
@@ -482,13 +499,31 @@ form {
       }
 
       figcaption {
+        font-size: .7em;
         text-align: center;
       }
 
       img {
         display: block;
-        margin: -10px auto;
+        max-width: 100%;
       }
     }
   }
 }
+
+.checkout-and-favorite
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 10px;
+  align-self: flex-end;
+  
+  #checkout, #favorite {
+    min-height: 44px;
+    min-width: 44px;  
+  }
+}
+
+
+  
