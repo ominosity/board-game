@@ -68,20 +68,6 @@ export async function convertToJson(response) {
   throw { name: 'servicesError', message: errorResponse };
 }
 
-/* Add the given template as child to the parent element */
-export function applyTemplate(parentElement, template, clear = true) {
-  if (!parentElement || !template) {
-    return;
-  } else {
-    const clone = template.content.cloneNode(true);
-
-    if (clear) {
-      parentElement.innerHTML = '';
-    }
-    parentElement.appendChild(clone);
-  }
-}
-
 /* Convert raw XML to an XML Doc for traversal */
 export async function xmlToXmlDoc(xml) {
   const parser = new DOMParser();
