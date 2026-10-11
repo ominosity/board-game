@@ -75,3 +75,11 @@ export async function xmlToXmlDoc(xml) {
 
   return xmlDoc;
 }
+
+/* Get the value of a parameter from the query string */
+export function getParam(key) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const paramValue = urlParams.get(key)
+  return paramValue;
+}

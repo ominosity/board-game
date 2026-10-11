@@ -378,7 +378,7 @@ form {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 #success {
@@ -391,7 +391,8 @@ form {
 }
 
 /* Styles for Games page */
-#games {
+#games,
+#game {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -444,7 +445,7 @@ form {
       align-items: center;
     }
 
-    img.gamePic {
+    img.game-pic {
       border: 1px solid var(--primary-color);
       box-shadow: var(--button-shadow);
       max-width: 100%;
@@ -510,19 +511,83 @@ form {
         max-width: 100%;
       }
     }
+
+    .checkout-and-favorite {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      gap: 10px;
+      align-self: flex-end;
+
+      #checkout,
+      #favorite {
+        min-height: 44px;
+        min-width: 44px;
+      }
+    }
   }
 }
 
-.checkout-and-favorite {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  gap: 10px;
-  align-self: flex-end;
+/* Styles for Game Details page */
+#game {
+  div.panel {
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
 
-  #checkout,
-  #favorite {
-    min-height: 44px;
-    min-width: 44px;
+    @media screen and (min-width: 300px) {
+      max-width: 1000px;
+
+      h3 {
+        font-size: 1.5em;
+      }
+
+      & .detail-game-pic {
+        justify-self: center;
+      }
+
+      & ul {
+        width: fit-content;
+        justify-self: center;
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+      border: none;
+      border-bottom: 2px solid var(--primary-color);
+      box-shadow: none;
+    }
+
+    .detail-game-pic {
+      margin-top: 10px;
+      border: 2px solid var(--secondary-color);
+      max-width: 100%;
+      border-radius: 15px;
+    }
+
+    ul {
+      margin: 10px 0;
+
+      li {
+        font-size: 0.9em;
+
+        span {
+          font-size: 1.1em;
+        }
+      }
+    }
+
+    .description {
+      font-size: 0.9em;
+    }
+
+    div.bgg-link {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    #detail-bgg-link {
+      font-size: 1em;
+    }
   }
 }
