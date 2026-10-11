@@ -5,3 +5,8 @@ loadHeaderFooter();
 
 const section = document.getElementById('schedule');
 getAvailability(section);
+
+const current = document.getElementById('current-date-time-zone');
+
+const now = new Date();
+current.textContent = now;

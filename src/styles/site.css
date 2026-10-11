@@ -49,7 +49,7 @@ h6 {
   font-style: normal;
   color: var(--primary-color);
   text-align: center;
-  padding: 5px;
+  padding: 5px; 
 }
 
 h2,
@@ -59,7 +59,9 @@ h5,
 h6 {
   border: var(--outline);
   border-radius: 15px;
-  margin: 20px 0px;
+  max-width: 1000px;
+  margin: 0 auto 10px auto;
+
 }
 
 section {
@@ -68,7 +70,8 @@ section {
 }
 
 p {
-  margin-bottom: 15px;
+  max-width: 1000px;
+  margin: 0 auto 15px auto;
 }
 
 button,
@@ -224,7 +227,6 @@ nav {
 
 /* Styles for shared footers */
 footer {
-  font-size: 0.7em;
   position: sticky;
   bottom: 0px;
   left: 0px;
@@ -467,7 +469,6 @@ form {
       li {
         list-style-type: none;
         font-weight: bold;
-        font-size: 0.7em;
 
         span {
           font-weight: normal;
@@ -502,7 +503,6 @@ form {
       }
 
       figcaption {
-        font-size: 0.7em;
         text-align: center;
       }
 
@@ -590,4 +590,23 @@ form {
       font-size: 1em;
     }
   }
+}
+
+/* Styles for Availability page */
+#pick-a-game-night {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  select {
+    option {
+      padding: 5px;
+      height: 44px;
+      align-content: center;
+    }
+  }
+}
+
+.smallText {
+        font-size: .7em;
 }

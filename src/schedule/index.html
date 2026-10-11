@@ -26,9 +26,14 @@
     <header></header>
     <main>
       <h2>Schedule a Game Night</h2>
+      <p class="smallText">Current Time: <span id="current-date-time-zone"></span></p>
+      <h3>Availability</h3>
       <section>
-        <p>Please see available times below and select one:</p>
-        <ul id="schedule"></ul>
+        <form id="pick-a-game-night">
+        <label for="schedule">Please see available times below and select one:</label>
+        <select id="schedule" size="5"></select>
+        <button>Choose time slot</button>
+        </form>
       </section>
     </main>
     <footer></footer>
