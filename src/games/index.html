@@ -1,58 +1,62 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Games - Burgener Chalet Board Games</title>
+    <meta name="author" content="Richard Burgener" />
+    <meta
+      name="description"
+      content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet"
+    />
+    <link rel="icon" href="/images/favicon.ico" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Browse Games - Burgener Chalet Board Games</title>
-  <meta name="author" content="Richard Burgener" />
-  <meta name="description"
-    content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet" />
-  <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/styles/site.css" />
+    <script src="/js/pages/games.js" type="module"></script>
 
-  <link rel="stylesheet" href="/styles/site.css" />
-  <script src="/js/pages/games.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <header></header>
+    <main>
+      <h2>Games</h2>
+      <form id="sort-filter-search">
+        <label for="sort-or-filter">Sort or Filter: </label>
+        <select id="sort-or-filter">
+          <optgroup label="Sort">
+            <option value="" selected disabled>Choose an option...</option>
+            <option value="name-a-z">Name A-Z</option>
+            <option value="name-z-a">Name Z-A</option>
+            <option value="time-asc">Average time (asc)</option>
+            <option value="time-desc">Average time (desc)</option>
+            <option value="min-asc">Minimum players (asc)</option>
+            <option value="min-desc">Minimum players (desc)</option>
+            <option value="max-asc">Maximum players (asc)</option>
+            <option value="max-desc">Maximum players (desc)</option>
+          </optgroup>
+          <optgroup label="Filter by Location">
+            <option value="living-room">Living Room</option>
+            <option value="1">Basket 1</option>
+            <option value="2">Basket 2</option>
+            <option value="3">Basket 3</option>
+            <option value="4">Basket 4</option>
+            <option value="5">Basket 5</option>
+            <option value="6">Basket 6</option>
+            <option value="closet">Closet Shelves</option>
+          </optgroup>
+        </select>
 
-<body>
-  <header></header>
-  <n>
-    <h2>Games</h2>
-    <form id="sort-filter-search">
-      <label for="sort-or-filter">Sort or Filter: </label>
-      <select id="sort-or-filter">
-        <optgroup label="Sort">
-        <option value="" selected disabled>Choose an option...</option>
-        <option value="name-a-z">Name A-Z</option>
-        <option value="name-z-a">Name Z-A</option>
-        <option value="time-asc">Average time (asc)</option>
-        <option value="time-desc">Average time (desc)</option>
-        <option value="min-asc">Minimum players (asc)</option>
-        <option value="min-desc">Minimum players (desc)</option>
-        <option value="max-asc">Maximum players (asc)</option>
-        <option value="max-desc">Maximum players (desc)</option>
-      </optgroup>
-      <optgroup label="Filter by Location">
-        <option value="living-room">Living Room</option>
-        <option value="1">Basket 1</option>
-        <option value="2">Basket 2</option>
-        <option value="3">Basket 3</option>
-        <option value="4">Basket 4</option>
-        <option value="5">Basket 5</option>
-        <option value="6">Basket 6</option>
-        <option value="closet">Closet Shelves</option>
-      </optgroup>
-      </select>
-
-      <label for="search">Name Search:</label>
-      <input type="text" id="search" placeholder="Search term">
-      <button id="searchButton">Search</button>
-    </form>
-    <section id="games"></section>
+        <label for="search">Name Search:</label>
+        <input type="text" id="search" placeholder="Search term" />
+        <button id="searchButton">Search</button>
+      </form>
+      <section id="games"></section>
     </main>
     <footer></footer>
 
@@ -63,19 +67,30 @@
         </a>
         <div class="inner-container">
           <a href="#" class="details" loading="lazy">
-            <img class="game-pic">
+            <img class="game-pic" />
           </a>
           <ul>
-            <li class="smallText li-players">Number of Players: <span class="players"></span>
+            <li class="smallText li-players">
+              Number of Players: <span class="players"></span>
             </li>
-            <li class="smallText li-playtime">Average game time: <span class="playtime"></span></li>
-            <li class="smallText">Game Location: <span class="location"></span></li>
+            <li class="smallText li-playtime">
+              Average game time: <span class="playtime"></span>
+            </li>
+            <li class="smallText">
+              Game Location: <span class="location"></span>
+            </li>
           </ul>
           <div class="bgg-link">
             <a href="https://boardgamegeek.com/" target="_blank">
               <figure>
-                <figcaption class="smallText hide">Images and additional data</figcaption>
-                <img class="bgg-logo" src="/images/bgg-logo.webp" loading="lazy" />
+                <figcaption class="smallText hide">
+                  Images and additional data
+                </figcaption>
+                <img
+                  class="bgg-logo"
+                  src="/images/bgg-logo.webp"
+                  loading="lazy"
+                />
               </figure>
             </a>
           </div>
@@ -86,6 +101,5 @@
         </div>
       </div>
     </template>
-</body>
-
+  </body>
 </html>

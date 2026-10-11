@@ -1,4 +1,4 @@
-import { loadHeaderFooter } from '../classes/Utils.mjs';
+import { getParam, loadHeaderFooter } from '../classes/Utils.mjs';
 import Authenticator from '../classes/Authenticator.mjs';
 
 loadHeaderFooter();
@@ -23,12 +23,14 @@ if (signInForm) {
     window.location.replace('./edit.html');
   }
 
+  // Reset validations when altering username field
   const usernameElement = document.getElementById('username');
   usernameElement.addEventListener('input', () => {
     usernameElement.setCustomValidity('');
     usernameElement.reportValidity();
   });
 
+  // Submit a sign-in request
   signInForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const userNameValidationElement = document.getElementById('username');
@@ -36,8 +38,6 @@ if (signInForm) {
     const passwordValidationElement = document.getElementById('password');
     const checkPassword = passwordValidationElement.value;
     const accountText = document.getElementById('accountButton');
-
-    // authenticator.init();
 
     try {
       const results = authenticator.login(
@@ -51,9 +51,19 @@ if (signInForm) {
         document.getElementById('success').classList.remove('hide');
         const name = document.getElementById('personal-name');
         name.textContent = authenticator.getLoggedInName();
+
+        // Handle redirects
+        const refPage = getParam('refpage');
+        if (refPage) {
+          switch (refPage) {
+            case 'schedule':
+              window.location.replace('../schedule/index.html');
+              break;
+          }
+        }
       }
     } catch (error) {
-      // console.error(error);
+      // Eat the error
     }
   });
 }

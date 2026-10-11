@@ -13,7 +13,12 @@ export default class Authenticator {
 
   async init() {
     this.users = await getLocalStorage('BCGamesUsers') || [];
-    this.loggedInUser = await getLocalStorage('BCGamesCurrentUser');
+    const user = await JSON.parse(getLocalStorage('BCGamesCurrentUser'));
+    if (user) {
+      this.loggedInUser = user.username;
+    } else {
+      this.loggedInUser = null;
+    }
 
     /* No usernames or passwords on file */
     if (!this.users || this.users.length === 0) {
@@ -113,7 +118,13 @@ export default class Authenticator {
       this.loggedIn = true;
       loginElement.textContent = 'Account';
       loginElement.setAttribute('href', '/account/edit.html');
-      setLocalStorage('BCGamesCurrentUser', this.loggedInUser);
+
+      const limitedUserObject = {
+        username : user.username,
+        name: user.name,
+        email: user.email
+      };
+      setLocalStorage('BCGamesCurrentUser', JSON.stringify(limitedUserObject));
       return true;
     } else {
       passwordValidationElement.setCustomValidity('Invalid username or password');
@@ -131,6 +142,15 @@ export default class Authenticator {
         user.username === this.loggedInUser
       );
       return userObject['name'];
+    }
+  }
+
+  getLoggedInEmail() {
+    if (this.loggedInUser != null) {
+      const userObject = this.users.find(user =>
+        user.username === this.loggedInUser
+      );
+      return userObject['email'];
     }
   }
 

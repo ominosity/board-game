@@ -26,15 +26,25 @@
     <header></header>
     <main>
       <h2>Schedule a Game Night</h2>
-      <p class="smallText">Current Time: <span id="current-date-time-zone"></span></p>
+      <p class="smallText" id="current-time">
+        Current Time: <span id="current-date-time-zone"></span>
+      </p>
       <h3>Availability</h3>
       <section>
         <form id="pick-a-game-night">
-        <label for="schedule">Please select an available time below to generate a reservation email:</label>
-        <select id="schedule" size="5" required></select>
-        <button type="submit">Choose time slot</button>
+          <label for="schedule"
+            >Please select an available time below to generate a reservation
+            email. You must be signed in to complete the reservation.</label
+          >
+          <select id="schedule" size="5" required></select>
+          <button type="submit">Choose time slot</button>
         </form>
-        <p id="confirmation" class="hide">Thank you for scheduling a game night. We will see you there!</p>
+        <div id="confirmation" class="hide">
+          <p>
+            Thank you for scheduling a game night. We will see you<br />
+            <span id="start-time"></span>
+          </p>
+        </div>
       </section>
     </main>
     <footer></footer>
