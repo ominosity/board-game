@@ -1,56 +1,73 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Details - Burgener Chalet Board Games</title>
+    <meta name="author" content="Richard Burgener" />
+    <meta
+      name="description"
+      content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet"
+    />
+    <link rel="icon" href="/images/favicon.ico" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game Details - Burgener Chalet Board Games</title>
-  <meta name="author" content="Richard Burgener" />
-  <meta name="description"
-    content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet" />
-  <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/styles/site.css" />
+    <script src="/js/pages/gameDetails.js" type="module"></script>
 
-  <link rel="stylesheet" href="/styles/site.css" />
-  <script src="/js/pages/gameDetails.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <header></header>
+    <main>
+      <h2>Game Details</h2>
+      <section id="game"></section>
+    </main>
 
-<body>
-  <header></header>
-  <main>
-    <h2>Game Details</h2>
-    <section id="game"></section>
-  </main>
-
-  <footer></footer>
-  <template id="game-template">
-    <div class="panel">
+    <footer></footer>
+    <template id="game-template">
+      <div class="panel">
         <h3></h3>
-        <img class="detail-game-pic">
-      <ul>
-        <li>Year published: <span class="year"></span></li>
-        <!-- <li class="li-category">Category: <span class="category"></span></li> -->
-        <li class="li-players">Number of Players: <span class="players"></span>
-        </li>
-        <li class="li-playtime">Average game time: <span class="playtime"></span></li>
-        <li class="li-min-age">Minimum recommended age: <span class="min-age"></span></li>
-        <li>Average BGG user rating: <span class="rating"></span></li>
-        <li>Game Location: <span class="location"></span></li>
-        <li class="li-separate-board">Separate Board: <span class="separate-board"></span></li>
-      </ul>
-      <p class="description"></p>
-      <div class="bgg-link">
-        <a href="https://boardgamegeek.com/" target="_blank">
-          <figure>
-            <figcaption id="detail-bgg-link">Images and additional data</figcaption>
-            <img class="bgg-logo" src="/images/bgg-logo.webp" loading="lazy" />
-        </a>
+        <img class="detail-game-pic" />
+        <ul>
+          <li>Year published: <span class="year"></span></li>
+          <!-- <li class="li-category">Category: <span class="category"></span></li> -->
+          <li class="li-players">
+            Number of Players: <span class="players"></span>
+          </li>
+          <li class="li-playtime">
+            Average game time: <span class="playtime"></span>
+          </li>
+          <li class="li-min-age">
+            Minimum recommended age: <span class="min-age"></span>
+          </li>
+          <li>Average BGG user rating: <span class="rating"></span></li>
+          <li>Game Location: <span class="location"></span></li>
+          <li class="li-separate-board">
+            Separate Board: <span class="separate-board"></span>
+          </li>
+        </ul>
+        <p class="description"></p>
+        <div class="bgg-link">
+          <a href="https://boardgamegeek.com/" target="_blank">
+            <figure>
+              <figcaption id="detail-bgg-link">
+                Images and additional data
+              </figcaption>
+              <img
+                class="bgg-logo"
+                src="/images/bgg-logo.webp"
+                loading="lazy"
+              />
+            </figure>
+          </a>
+        </div>
       </div>
-    </div>
-  </template>
-</body>
-
+    </template>
+  </body>
 </html>

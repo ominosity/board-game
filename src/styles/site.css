@@ -49,7 +49,7 @@ h6 {
   font-style: normal;
   color: var(--primary-color);
   text-align: center;
-  padding: 5px; 
+  padding: 5px;
 }
 
 h2,
@@ -61,7 +61,6 @@ h6 {
   border-radius: 15px;
   max-width: 1000px;
   margin: 0 auto 10px auto;
-
 }
 
 section {
@@ -608,5 +607,13 @@ form {
 }
 
 .smallText {
-        font-size: .7em;
+  font-size: 0.7em;
+}
+
+#confirmation,
+#current-time {
+  text-align: center;
+}
+#start-time {
+  font-weight: bold;
 }
