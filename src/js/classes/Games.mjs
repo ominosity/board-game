@@ -69,6 +69,10 @@ export default class Games {
 
     return results || [];
   }
+
+  getGameByID(ID) {
+    return this.gamesList.find(game => Number(game.id) === Number(ID));
+  }
 }
 
 /* Get a list of games from BGG in XML format and convert to JSON for processing */
@@ -218,7 +222,8 @@ export async function applyGamesTemplate(data, template, parentElement) {
     /* Create holders for the UI elements */
     const clone = template.content.cloneNode(true);
     const h3 = clone.querySelector('h3');
-    const image = clone.querySelector('img');
+    const image = clone.querySelector('.game-pic');
+    const bigImage = clone.querySelector('.detail-game-pic');
     const year = clone.querySelector('.year');
     const board = clone.querySelector('.separate-board');
     const players = clone.querySelector('.players');
@@ -228,12 +233,16 @@ export async function applyGamesTemplate(data, template, parentElement) {
     const category = clone.querySelector('.category');
     const rating = clone.querySelector('.rating');
     const description = clone.querySelector('.description');
+    const links = clone.querySelectorAll('.details');
 
     /* Fill out UI with full game data */
     if (game.name) h3.textContent = game.name;
     if (image) image.src = game.thumbnail;
     if (image) image.alt = game.name;
     if (image) image.loading = 'lazy';
+    if (bigImage) bigImage.src = game.image;
+    if (bigImage) bigImage.alt = game.name;
+    if (bigImage) bigImage.loading = 'lazy';
     if (year) year.textContent = game.year;
     if (board) board.textContent = game.separateBoard ? 'Yes' : 'No';
     if (players) players.textContent = `${game.minPlayers} to ${game.maxPlayers}`;
@@ -243,6 +252,7 @@ export async function applyGamesTemplate(data, template, parentElement) {
     if (category) category.textContent = game.category;
     if (rating) rating.textContent = game.rating;
     if (description) description.innerHTML = game.description;
+    if (links) links.forEach(link => link.href = `../details/index.html?gameID=${game.id}`);
 
     /* Hide BGG elements if no BGG data (lack of image is key) */
     if (game.image === null) {
@@ -257,7 +267,11 @@ export async function applyGamesTemplate(data, template, parentElement) {
       if (clone.querySelector('.li-category')) clone.querySelector('.li-category').classList.add('hide');
       if (rating) rating.classList.add('hide');
       if (description) description.classList.add('hide');
-      clone.querySelector('.bgg-link a figure img').classList.add('hide');
+      if (links) links.forEach(link => {
+        link.style.pointerEvents = 'none';
+        link.style.cursor = 'default';
+      });
+      clone.querySelector('.bgg-link a figure').classList.add('hide');
     }
     parentElement.appendChild(clone);
   });
@@ -280,4 +294,20 @@ export async function searchGames(term, template, parentElement) {
     // Apply games in list to the template and add to the DOM
     await applyGamesTemplate(newList, template, parentElement);
   }
+}
+
+export async function getGameDetails(gameID, parentElement) {
+  const gameContainer = new Games();
+  await gameContainer.init();
+
+  // Create a single-value array, so we can reuse the mass template builder
+  const singleArray = [];
+  
+  // Find the game that matches the ID
+  const game = await gameContainer.getGameByID(gameID);
+  singleArray.push(game);
+
+  // parentElement.innerHTML = `<h1>Game ID: ${game.id} </h1>`;
+  const template = document.getElementById('game-template');
+  await applyGamesTemplate(singleArray, template, parentElement);
 }
