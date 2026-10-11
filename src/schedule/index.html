@@ -30,10 +30,11 @@
       <h3>Availability</h3>
       <section>
         <form id="pick-a-game-night">
-        <label for="schedule">Please see available times below and select one:</label>
-        <select id="schedule" size="5"></select>
-        <button>Choose time slot</button>
+        <label for="schedule">Please select an available time below to generate a reservation email:</label>
+        <select id="schedule" size="5" required></select>
+        <button type="submit">Choose time slot</button>
         </form>
+        <p id="confirmation" class="hide">Thank you for scheduling a game night. We will see you there!</p>
       </section>
     </main>
     <footer></footer>
