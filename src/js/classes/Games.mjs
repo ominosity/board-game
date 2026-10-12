@@ -12,8 +12,9 @@ export default class Games {
   /* Initialize this Games object to get the games from local storage or
      a combination of local storage and the BGG API */
   async init() {
-    if (getLocalStorage('BCGamesList')) {
-      this.gamesList = JSON.parse(getLocalStorage('BCGamesList'));
+    const localGamesList = getLocalStorage('BCGamesList');
+    if (localGamesList !== "null" && localGamesList !== null && localGamesList !== undefined) {
+      this.gamesList = localGamesList;
     } else {
 
       const dataSource = new DataSource('/json/games.json', 'Games');
@@ -31,7 +32,7 @@ export default class Games {
       this.gamesList = combinedData;
 
       // Write to local storage so we're not hitting the API every query
-      setLocalStorage('BCGamesList', JSON.stringify(this.gamesList));
+      setLocalStorage('BCGamesList', this.gamesList);
     }
   }
 
