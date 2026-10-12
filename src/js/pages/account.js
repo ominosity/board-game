@@ -30,6 +30,13 @@ if (signInForm) {
     usernameElement.reportValidity();
   });
 
+  // Reset username validations when altering password field
+  const passwordElement = document.getElementById('password');
+  passwordElement.addEventListener('input', () => {
+    usernameElement.setCustomValidity('');
+    usernameElement.reportValidity();
+  });
+
   // Submit a sign-in request
   signInForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -90,6 +97,7 @@ if (editForm) {
   nameElement.value = thisUser.name;
   emailElement.value = thisUser.email;
 
+  // Reset validations on changes
   passwordElement.addEventListener('input', () => {
     passwordElement.setCustomValidity('');
     passwordElement.reportValidity();
@@ -123,12 +131,14 @@ if (editForm) {
 
 /* We've come to the new user sign up page */
 if (registerForm) {
+  // Clear validation errors on change
   const passwordElement = document.getElementById('new-password');
   passwordElement.addEventListener('input', () => {
     passwordElement.setCustomValidity('');
     passwordElement.reportValidity();
   });
 
+  // Clear validation errors on change
   const usernameElement = document.getElementById('new-username');
   usernameElement.addEventListener('input', () => {
     usernameElement.setCustomValidity('');

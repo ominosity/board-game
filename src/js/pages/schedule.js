@@ -8,11 +8,10 @@ import {
 loadHeaderFooter();
 
 // Check if there is already a signed-in user with an appointment
-const currentUser = JSON.parse(getLocalStorage('BCGamesCurrentUser'));
+const currentUser = getLocalStorage('BCGamesCurrentUser');
 if (currentUser) {
-  const currentAppointment = JSON.parse(
-    getLocalStorage(`BCGamesSchedule - ${currentUser.username}`),
-  );
+  const currentAppointment = getLocalStorage(`BCGamesSchedule - ${currentUser.username}`);
+
   if (currentAppointment) {
     showConfirmation(new Date());
   }
@@ -34,7 +33,7 @@ form.addEventListener('submit', (event) => {
   const scheduleID = document.getElementById('schedule').value;
 
   // Make sure the user is signed in. If not, redirect to sign-in page
-  const user = JSON.parse(getLocalStorage('BCGamesCurrentUser'));
+  const user = getLocalStorage('BCGamesCurrentUser');
   if (user) {
     const senderName = user.name;
     const senderEmail = user.email;
@@ -50,11 +49,9 @@ form.addEventListener('submit', (event) => {
 export function showConfirmation(startTime) {
   let determinedStartTime;
   // First check if current user has an appointment. If so, reuse it.
-  const functionUser = JSON.parse(getLocalStorage('BCGamesCurrentUser'));
+  const functionUser = getLocalStorage('BCGamesCurrentUser');
   if (functionUser) {
-    const functionAppointment = JSON.parse(
-      getLocalStorage(`BCGamesSchedule - ${functionUser.username}`),
-    );
+    const functionAppointment = getLocalStorage(`BCGamesSchedule - ${functionUser.username}`);
     if (functionAppointment) {
       determinedStartTime = new Date(functionAppointment.appStart);
     } else {

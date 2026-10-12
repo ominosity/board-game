@@ -20,6 +20,7 @@ sortOrFilterElement.addEventListener('change', () => {
   );
 });
 
+// Clear validation errors on changes
 const searchTermElement = document.getElementById('search');
 searchTermElement.addEventListener('input', (event) => {
   event.currentTarget.setCustomValidity('');

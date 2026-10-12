@@ -79,7 +79,7 @@ export async function generateAndSendAppointment(id, name, email, username) {
     appStart: startDate,
     appEnd: endDate
   }
-  setLocalStorage(key, JSON.stringify(value));
+  setLocalStorage(key, value);
 
   // Generate email for user to send
   const subject = encodeURIComponent('Game Night Reservation');

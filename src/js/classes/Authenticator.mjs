@@ -13,7 +13,7 @@ export default class Authenticator {
 
   async init() {
     this.users = await getLocalStorage('BCGamesUsers') || [];
-    const user = await JSON.parse(getLocalStorage('BCGamesCurrentUser'));
+    const user = await getLocalStorage('BCGamesCurrentUser');
     if (user) {
       this.loggedInUser = user.username;
     } else {
@@ -25,7 +25,7 @@ export default class Authenticator {
       this.loggedIn = false;
     }
 
-    if (this.loggedInUser !== false && this.loggedInUser !== null) {
+    if (this.loggedInUser !== false && this.loggedInUser !== null && this.loggedInUser !== undefined) {
       this.loggedIn = true;
       const user = this.users.find(lUser => lUser.username === this.loggedInUser);
       this.username = user.username;
@@ -124,7 +124,7 @@ export default class Authenticator {
         name: user.name,
         email: user.email
       };
-      setLocalStorage('BCGamesCurrentUser', JSON.stringify(limitedUserObject));
+      setLocalStorage('BCGamesCurrentUser', limitedUserObject);
       return true;
     } else {
       passwordValidationElement.setCustomValidity('Invalid username or password');
