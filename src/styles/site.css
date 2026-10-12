@@ -518,10 +518,10 @@ form {
       gap: 10px;
       align-self: flex-end;
 
-      #checkout,
-      #favorite {
-        min-height: 44px;
-        min-width: 44px;
+      .checkout,
+      .favorite {
+        height: 44px;
+        width: 44px;
       }
     }
   }

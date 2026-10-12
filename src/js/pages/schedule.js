@@ -10,7 +10,9 @@ loadHeaderFooter();
 // Check if there is already a signed-in user with an appointment
 const currentUser = getLocalStorage('BCGamesCurrentUser');
 if (currentUser) {
-  const currentAppointment = getLocalStorage(`BCGamesSchedule - ${currentUser.username}`);
+  const currentAppointment = getLocalStorage(
+    `BCGamesSchedule - ${currentUser.username}`,
+  );
 
   if (currentAppointment) {
     showConfirmation(new Date());
@@ -51,7 +53,9 @@ export function showConfirmation(startTime) {
   // First check if current user has an appointment. If so, reuse it.
   const functionUser = getLocalStorage('BCGamesCurrentUser');
   if (functionUser) {
-    const functionAppointment = getLocalStorage(`BCGamesSchedule - ${functionUser.username}`);
+    const functionAppointment = getLocalStorage(
+      `BCGamesSchedule - ${functionUser.username}`,
+    );
     if (functionAppointment) {
       determinedStartTime = new Date(functionAppointment.appStart);
     } else {
