@@ -189,7 +189,7 @@ export async function mergeLocalAndBggDatasets(localData, bggData) {
   return mergedData;
 }
 
-/* Apply games list to template */
+/* Apply all games list to template */
 export async function loadAllGamesToParent(template, parentElement) {
   // Get full games list from all sources by creating a Games object 
   // and initializing it
@@ -199,6 +199,13 @@ export async function loadAllGamesToParent(template, parentElement) {
   // Apply games in list to the template and add to the DOM
   const gamesList = await gameContainer.getGames();
   await applyGamesTemplate(gamesList, template, parentElement);
+}
+
+/* Apply favorite games list to template */
+export async function loadFavoriteGamesToParent(template, parentElement) {
+  // Get favorites list from localStorage
+  const favorites = getLocalStorage('BCGamesFavorites') || [];
+  if (favorites.length !== 0) await applyGamesTemplate(favorites, template, parentElement);
 }
 
 /* Load games, sort or filter them, and output them to the template */
@@ -219,8 +226,11 @@ export async function sortOrFilterGamesToTemplateAndParent(template, parentEleme
 
 /* Apply given data to games template and output to parent element */
 export async function applyGamesTemplate(data, template, parentElement) {
+  // Get a copy of favorited games to populate the favorite icons appropriately
+  const favorites = getLocalStorage('BCGamesFavorites') || [];
+
   data.forEach(game => {
-    /* Create holders for the UI elements */
+    // Create holders for the UI elements 
     const clone = template.content.cloneNode(true);
     const h3 = clone.querySelector('h3');
     const image = clone.querySelector('.game-pic');
@@ -235,15 +245,21 @@ export async function applyGamesTemplate(data, template, parentElement) {
     const rating = clone.querySelector('.rating');
     const description = clone.querySelector('.description');
     const links = clone.querySelectorAll('.details');
+    const favoriteButton = clone.querySelector('.favorite');
+    const favoriteIcon = clone.querySelector('.favorite img');
 
-    /* Fill out UI with full game data */
+    // Fill out UI with full game data 
     if (game.name) h3.textContent = game.name;
-    if (image) image.src = game.thumbnail;
-    if (image) image.alt = game.name;
-    if (image) image.loading = 'lazy';
-    if (bigImage) bigImage.src = game.image;
-    if (bigImage) bigImage.alt = game.name;
-    if (bigImage) bigImage.loading = 'lazy';
+    if (image) {
+      image.src = game.thumbnail;
+      image.alt = game.name;
+      image.loading = 'lazy';
+    };
+    if (bigImage) {
+      bigImage.src = game.image;
+      bigImage.alt = game.name;
+      bigImage.loading = 'lazy';
+    };
     if (year) year.textContent = game.year;
     if (board) board.textContent = game.separateBoard ? 'Yes' : 'No';
     if (players) players.textContent = `${game.minPlayers} to ${game.maxPlayers}`;
@@ -254,7 +270,24 @@ export async function applyGamesTemplate(data, template, parentElement) {
     if (rating) rating.textContent = game.rating;
     if (description) description.innerHTML = game.description;
     if (links) links.forEach(link => link.href = `../details/index.html?gameID=${game.id}`);
-
+    if (favoriteButton) {
+      favoriteButton.dataset.gameId = game.id;
+      favoriteButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        toggleFavorite(game.id, parentElement);
+      });
+    }
+    if (favoriteIcon) {
+      const foundGame = favorites.find(compareGame => Number(compareGame.id) === Number(game.id));
+      if (foundGame) {
+        favoriteIcon.src = '/images/favorite.svg';
+        favoriteIcon.alt = `Unfavorite ${game.name}`;
+      } else {
+        favoriteIcon.src = '/images/unfavorite.svg';
+        favoriteIcon.alt = `Favorite ${game.name}`;
+      };
+    };
+  
     /* Hide BGG elements if no BGG data (lack of image is key) */
     if (game.image === null) {
       if (image) image.classList.add('hide');
@@ -297,7 +330,8 @@ export async function searchGames(term, template, parentElement) {
   }
 }
 
-export async function getGameDetails(gameID, parentElement) {
+// Given its ID, get the details of a game and apply them as children to the parent element
+export async function getGameDetailsAndApplyTemplate(gameID, parentElement) {
   const gameContainer = new Games();
   await gameContainer.init();
 
@@ -311,4 +345,24 @@ export async function getGameDetails(gameID, parentElement) {
   // parentElement.innerHTML = `<h1>Game ID: ${game.id} </h1>`;
   const template = document.getElementById('game-template');
   await applyGamesTemplate(singleArray, template, parentElement);
+}
+
+// Toggle a game in/out of favorites
+function toggleFavorite(gameId, parentElement) {
+  const chosenGame = getLocalStorage('BCGamesList').find(game => Number(game.id) === Number(gameId));
+  const gameElementFavoriteImage = parentElement.querySelector(`[data-game-id="${gameId}"] img`);
+
+  let favorites = getLocalStorage('BCGamesFavorites') || [];
+  const foundGame = favorites.find(game => Number(game.id) === Number(gameId));
+  if (foundGame) {
+    favorites = favorites.filter(game => game !== foundGame);
+    gameElementFavoriteImage.src = "/images/unfavorite.svg";
+    gameElementFavoriteImage.alt = `Favorite ${foundGame.name}`;
+  } else {
+    favorites.push(chosenGame);
+    gameElementFavoriteImage.src = "/images/favorite.svg";
+    gameElementFavoriteImage.alt = `Unfavorite ${chosenGame.name}`;
+  }
+  
+  setLocalStorage('BCGamesFavorites', favorites);
 }
