@@ -1,32 +1,33 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Browse Games - Burgener Chalet Board Games</title>
-    <meta name="author" content="Richard Burgener" />
-    <meta
-      name="description"
-      content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet"
-    />
-    <link rel="icon" href="/images/favicon.ico" />
 
-    <link rel="stylesheet" href="/styles/site.css" />
-    <script src="/js/pages/games.js" type="module"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Games - Burgener Chalet Board Games</title>
+  <meta name="author" content="Richard Burgener" />
+  <meta name="description"
+    content="A site dedicated to the board game offerings for guests staying at The Burgener Chalet" />
+  <link rel="icon" href="/images/favicon.ico" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <link rel="stylesheet" href="/styles/site.css" />
+  <script src="/js/pages/games.js" type="module"></script>
 
-  <body>
-    <header></header>
-    <main>
-      <h2>Games</h2>
-      <form id="sort-filter-search">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Oldenburg&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <h2>Games</h2>
+    <div class="toggles">
+      <button id="sort-toggle" class="toggle-button">Sort / Filter </button>
+      <button id="search-toggle" class="toggle-button">Search</button>
+    </div>
+    <form id="sort-filter-search">
+      <div id="sort-div" class="minimize">
         <label for="sort-or-filter">Sort or Filter: </label>
         <select id="sort-or-filter">
           <optgroup label="Sort">
@@ -51,57 +52,55 @@
             <option value="closet">Closet Shelves</option>
           </optgroup>
         </select>
-
+      </div>
+      <div id="search-div" class="minimize">
         <label for="search">Name Search:</label>
         <input type="text" id="search" placeholder="Search term" />
         <button id="searchButton">Search</button>
-      </form>
-      <section id="games"></section>
-    </main>
-    <footer></footer>
+      </div>
+    </form>
+    <section id="games"></section>
+  </main>
+  <footer></footer>
 
-    <template id="game-template">
-      <div class="panel">
-        <a href="#" class="details">
-          <h3></h3>
+  <template id="game-template">
+    <div class="panel">
+      <a href="#" class="details">
+        <h3></h3>
+      </a>
+      <div class="inner-container">
+        <a href="#" class="details" loading="lazy">
+          <img class="game-pic" />
         </a>
-        <div class="inner-container">
-          <a href="#" class="details" loading="lazy">
-            <img class="game-pic" />
+        <ul>
+          <li class="smallText li-players">
+            Number of Players: <span class="players"></span>
+          </li>
+          <li class="smallText li-playtime">
+            Average game time: <span class="playtime"></span>
+          </li>
+          <li class="smallText">
+            Game Location: <span class="location"></span>
+          </li>
+        </ul>
+        <div class="bgg-link">
+          <a href="https://boardgamegeek.com/" target="_blank">
+            <figure>
+              <figcaption class="smallText hide">
+                Images and additional data
+              </figcaption>
+              <img class="bgg-logo" src="/images/bgg-logo.webp" loading="lazy" />
+            </figure>
           </a>
-          <ul>
-            <li class="smallText li-players">
-              Number of Players: <span class="players"></span>
-            </li>
-            <li class="smallText li-playtime">
-              Average game time: <span class="playtime"></span>
-            </li>
-            <li class="smallText">
-              Game Location: <span class="location"></span>
-            </li>
-          </ul>
-          <div class="bgg-link">
-            <a href="https://boardgamegeek.com/" target="_blank">
-              <figure>
-                <figcaption class="smallText hide">
-                  Images and additional data
-                </figcaption>
-                <img
-                  class="bgg-logo"
-                  src="/images/bgg-logo.webp"
-                  loading="lazy"
-                />
-              </figure>
-            </a>
-          </div>
-          <div class="checkout-and-favorite">
-            <!-- <a class="button checkout" id="checkout">✔️</a> -->
-            <a class="button favorite"
-              ><img width="30" height="30" alt="favorite" /></a
-            ><!-- src="/images/unfavorite.svg" -->
-          </div>
+        </div>
+        <div class="checkout-and-favorite">
+          <!-- <a class="button checkout" id="checkout">✔️</a> -->
+          <a class="button favorite"><img width="30" height="30"
+              alt="favorite" /></a><!-- src="/images/unfavorite.svg" -->
         </div>
       </div>
-    </template>
-  </body>
+    </div>
+  </template>
+</body>
+
 </html>

@@ -394,6 +394,7 @@ form {
 /* Styles for Games page */
 #games,
 #game {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -614,6 +615,65 @@ form {
 #current-time {
   text-align: center;
 }
+
 #start-time {
   font-weight: bold;
+}
+
+.toggles {
+  max-width: 320px;
+  margin: 10px auto 0px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.toggle-button {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  width: 100%;
+
+  &.selected {
+    box-shadow: none;
+    background-color: var(--dark-gray);
+    color: white;
+  }
+}
+
+form#sort-filter-search {
+  gap: 0;
+  border: 0;
+  padding: 0;
+  margin: 0 auto 0px auto;
+
+  #sort-div,
+  #search-div {
+    max-height: 200px;
+    transition: max-height, padding .5s ease;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: var(--outline);
+    padding: 20px;
+    border-radius: 15px;
+    
+    &.minimize {
+      max-height: 0px;
+      overflow: hidden;
+      padding: 0px;
+      margin: 0px;
+      border: 0px;
+      transition: max-height, padding .5s ease;
+
+      * {
+        transition: 1.5s ease;
+      }
+    }
+  }
+
+  #search-button,
+  #sort-button {
+    grid-column: span 2;
+    width: 100%;
+  }
 }

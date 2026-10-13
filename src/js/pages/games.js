@@ -38,3 +38,24 @@ searchButton.addEventListener('click', (event) => {
     searchGames(searchTermElement.value, gameTemplate, gamesParent);
   }
 });
+
+const sortToggle = document.getElementById('sort-toggle');
+const sortDiv = document.getElementById('sort-div')
+const searchToggle = document.getElementById('search-toggle');
+const searchDiv = document.getElementById('search-div');
+
+searchToggle.addEventListener('click', (event) => {
+  event.preventDefault();
+  searchDiv.classList.toggle('minimize');
+  sortDiv.classList.add('minimize');
+  searchToggle.classList.toggle('selected');  
+  sortToggle.classList.remove('selected');
+});
+
+sortToggle.addEventListener('click', (event) => {
+  event.preventDefault();
+  sortDiv.classList.toggle('minimize');
+  searchDiv.classList.add('minimize');
+  sortToggle.classList.toggle('selected');
+  searchToggle.classList.remove('selected');
+});
