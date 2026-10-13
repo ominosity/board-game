@@ -681,3 +681,7 @@ form#sort-filter-search {
     width: 100%;
   }
 }
+
+#sort-div label, #search-div label {
+  margin-right: 10px;
+}
