@@ -1,4 +1,4 @@
-import ExternalSource from './ExternalSource';
+import ExternalSource from './ExternalSource.mjs';
 import Authenticator from './Authenticator.mjs';
 
 /* Load the header and footer sections on all pages, along with the event listeners

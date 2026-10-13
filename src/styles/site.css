@@ -649,21 +649,25 @@ form#sort-filter-search {
   #sort-div,
   #search-div {
     max-height: 200px;
-    transition: max-height, padding .5s ease;
+    transition:
+      max-height,
+      padding 0.5s ease;
     grid-column: span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: var(--outline);
     padding: 20px;
     border-radius: 15px;
-    
+
     &.minimize {
       max-height: 0px;
       overflow: hidden;
       padding: 0px;
       margin: 0px;
       border: 0px;
-      transition: max-height, padding .5s ease;
+      transition:
+        max-height,
+        padding 0.5s ease;
 
       * {
         transition: 1.5s ease;

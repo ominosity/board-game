@@ -1,5 +1,5 @@
 import DataSource from './DataSource.mjs';
-import { downloadBGGCollection } from './ExternalSource';
+import { downloadBGGCollection } from './ExternalSource.mjs';
 import { getLocalStorage, setLocalStorage } from './DataSource.mjs';
 
 /* A class to handle the entire games list and any functions
@@ -287,7 +287,7 @@ export async function applyGamesTemplate(data, template, parentElement) {
         favoriteIcon.alt = `Favorite ${game.name}`;
       };
     };
-  
+
     /* Hide BGG elements if no BGG data (lack of image is key) */
     if (game.image === null) {
       if (image) image.classList.add('hide');
@@ -337,7 +337,7 @@ export async function getGameDetailsAndApplyTemplate(gameID, parentElement) {
 
   // Create a single-value array, so we can reuse the mass template builder
   const singleArray = [];
-  
+
   // Find the game that matches the ID
   const game = await gameContainer.getGameByID(gameID);
   singleArray.push(game);
@@ -363,6 +363,6 @@ function toggleFavorite(gameId, parentElement) {
     gameElementFavoriteImage.src = "/images/favorite.svg";
     gameElementFavoriteImage.alt = `Unfavorite ${chosenGame.name}`;
   }
-  
+
   setLocalStorage('BCGamesFavorites', favorites);
 }
