@@ -219,7 +219,7 @@ nav {
     box-shadow: var(--pressed-button-shadow);
   }
 
-  &:hover {
+  &:hover, &:focus {
     outline: var(--outline);
   }
 }
